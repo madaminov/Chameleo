@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+$font-stack-satoshi: 'Satoshi', sans-serif;
+$font-stack-neue-regrade: 'Neue-Regrade', sans-serif;
+$font-stack-popins: 'Poppins', sans-serif;
+
+$font-size: 16px;
+$line-height: 24px;
+$font-weight: 400;
+
+$black: #141414 !default;
+$white: #ffffff !default;
+$primary: #040346 !default;
+
+$blue-1: #6f60f4 !default;
+$blue-2: #5949e5 !default;
+
+$gray-1: #b1afc4 !default;
+
+@mixin transition($transition) {
+  -moz-transition: all $transition ease;
+  -o-transition: all $transition ease;
+  -webkit-transition: all $transition ease;
+  -ms-transition: all $transition ease;
+  transition: all $transition ease;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}

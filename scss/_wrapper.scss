@@ -1,0 +1,38 @@
+.wrapper {
+  max-width: 768px;
+  min-height: 100dvh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.wrapper-gradient-one {
+  position: relative;
+  z-index: 2;
+  &::before {
+    content: '';
+    width: 290.218px;
+    height: 293.083px;
+    background-color: #7366e7;
+    filter: blur(75px);
+    position: absolute;
+    left: 1%;
+    top: -20%;
+    right: auto;
+    z-index: 1;
+  }
+  &::after {
+    content: '';
+    content: '';
+    width: 290px;
+    height: 319px;
+    background-color: #08add2;
+    filter: blur(75px);
+    position: absolute;
+    right: -45%;
+    top: 50%;
+    z-index: 1;
+    bottom: 50%;
+    margin: auto;
+  }
+}

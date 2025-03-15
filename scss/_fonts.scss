@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Satoshi'), url('../fonts/Satoshi-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Satoshi'), url('../fonts/Satoshi-Italic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Satoshi'), url('../fonts/Satoshi-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Satoshi'), url('../fonts/Satoshi-LightItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Satoshi'), url('../fonts/Satoshi-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Satoshi'),
+    url('../fonts/Satoshi-MediumItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Satoshi'), url('../fonts/Satoshi-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Satoshi'), url('../fonts/Satoshi-BoldItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Satoshi'), url('../fonts/Satoshi-Black.woff') format('woff');
+}
+@font-face {
+  font-family: 'Satoshi';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Satoshi'), url('../fonts/Satoshi-BlackItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-SemiBold-Italic.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Semibold.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Regular-Italic.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Regular.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Medium-Italic.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Medium.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Light-Italic.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Light.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-ExtraBold-Italic.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Extrabold.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Bold-Italic.otf');
+}
+@font-face {
+  font-family: 'Neue-Regrade';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Neue-Regrade'), url('../fonts/Neue-Regrade-Bold.otf');
+}
