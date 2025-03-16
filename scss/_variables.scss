@@ -16,6 +16,10 @@ $blue-1: #6f60f4 !default;
 $blue-2: #5949e5 !default;
 
 $gray-1: #b1afc4 !default;
+$gray-2: #e6e3ff !default;
+$gray-3: #efeff0 !default;
+$gray-4: #cecece !default;
+$gray-5: #f4f3ff !default;
 
 @mixin transition($transition) {
   -moz-transition: all $transition ease;
