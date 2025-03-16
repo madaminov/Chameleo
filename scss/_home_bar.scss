@@ -1,0 +1,35 @@
+.home-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  max-width: 768px;
+  margin: 0 auto;
+  right: 0;
+  z-index: 3;
+  .home-bar-change {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    cursor: pointer;
+    &::before {
+      content: '';
+      display: block;
+      width: 141px;
+      height: 4.57px;
+      flex-shrink: 0;
+      border-radius: 91.395px;
+      background: $black;
+      backdrop-filter: blur(36.55813980102539px);
+      margin-bottom: 7.31px;
+    }
+  }
+  &.close {
+    height: 31px;
+    .home-bar-change {
+      opacity: 1;
+    }
+  }
+}

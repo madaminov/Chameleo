@@ -12077,6 +12077,42 @@ body {
   background: #6f60f4;
 }
 
+.home-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  max-width: 768px;
+  margin: 0 auto;
+  right: 0;
+  z-index: 3;
+}
+.home-bar .home-bar-change {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+}
+.home-bar .home-bar-change::before {
+  content: "";
+  display: block;
+  width: 141px;
+  height: 4.57px;
+  flex-shrink: 0;
+  border-radius: 91.395px;
+  background: #141414;
+  backdrop-filter: blur(36.558139801px);
+  margin-bottom: 7.31px;
+}
+.home-bar.close {
+  height: 31px;
+}
+.home-bar.close .home-bar-change {
+  opacity: 1;
+}
+
 .btn-skip {
   color: #040346;
   text-align: center;
@@ -12121,7 +12157,7 @@ body {
   display: flex;
   width: 100%;
   height: 62px;
-  padding: 20px 149px;
+  padding: 20px 20px;
   background-color: #fff;
   border: none;
   justify-content: center;
@@ -12151,7 +12187,7 @@ body {
   line-height: normal;
   display: flex;
   height: 62px;
-  padding: 20px 149px;
+  padding: 20px 20px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -12172,6 +12208,41 @@ body {
   background-color: #5949e5;
 }
 .btn-primary:disabled {
+  background-color: #b1afc4;
+}
+
+.btn-secondary {
+  color: #141414;
+  text-align: center;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  height: 62px;
+  padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border: 1px solid #cecece;
+  background-color: #fff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover, .btn-secondary:active {
+  border: 1px solid #cecece;
+  background: #f6f6f6;
+}
+.btn-secondary:disabled {
   background-color: #b1afc4;
 }
 
@@ -12460,6 +12531,13 @@ body {
   padding-bottom: 40px;
   margin-top: 20px;
 }
+.start-view-2 .wrap-container .wrap-container-title-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
 .start-view-2 .wrap-container h1, .start-view-2 .wrap-container .h1 {
   color: #141414;
   text-align: center;
@@ -12529,6 +12607,75 @@ body {
   align-self: stretch;
   width: 100%;
   margin-top: auto;
+}
+
+.b2b-questionnaire {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  padding-bottom: 30px;
+  z-index: 2;
+}
+.b2b-questionnaire .wrap-progress-bar {
+  display: inline-flex;
+  padding: 44px 16px 20px 16px;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  border-bottom: 1px solid #efeff0;
+}
+.b2b-questionnaire .wrap-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-grow: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+.b2b-questionnaire .wrap-img {
+  padding: 0px 20px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.b2b-questionnaire .text h1, .b2b-questionnaire .text .h1 {
+  color: #141414;
+  text-align: center;
+  font-family: "Neue-Regrade", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.b2b-questionnaire .wrap-button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+}
+.b2b-questionnaire .wrap-button .row-button {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+.b2b-questionnaire .wrap-button .row-button .btn-secondary {
+  min-width: 120px;
+  width: 40%;
+}
+.b2b-questionnaire .wrap-button .row-button .btn-primary {
+  max-width: 100%;
+  width: 72%;
 }
 
 /*# sourceMappingURL=style.css.map */

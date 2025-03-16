@@ -104,6 +104,13 @@
     padding-right: 20px;
     padding-bottom: 40px;
     margin-top: 20px;
+    .wrap-container-title-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      align-self: stretch;
+    }
     h1 {
       color: $black;
       text-align: center;
