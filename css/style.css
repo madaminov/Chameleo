@@ -4,7 +4,7 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12060,6 +12060,81 @@ body {
   letter-spacing: 0.03px;
 }
 
+.progres-circle {
+  position: relative;
+  display: inline-flex;
+}
+.progres-circle .text {
+  color: #333;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progres-circle .text .numb {
+  transition: all 0.3s ease;
+}
+
+.circular-progress {
+  --size: 128px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 12px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--value-progress) * var(--circumference)) / 100);
+  transition: all 0.3s ease;
+}
+
+.circular-progress circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: round;
+}
+
+.circular-progress circle.bg {
+  stroke: #e2dffd;
+}
+
+.circular-progress circle.fg {
+  transform: rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  transition: stroke-dasharray 0.5s linear 0s;
+  stroke: #6f60f4;
+}
+
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+.calculating-progres-circle {
+  width: 92.168px;
+  height: 92.169px;
+  animation: 1.9s linear infinite spinner-border;
+}
+
+@keyframes progress-animation {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 100;
+  }
+}
 .progress {
   width: 100%;
   height: 8px;
@@ -12125,6 +12200,11 @@ body {
   background-color: transparent;
   border: 0;
   width: 100%;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn-skip:hover {
   color: #141414;
@@ -12136,6 +12216,11 @@ body {
   padding: 0;
   background-color: transparent;
   border: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn-arrow-left svg {
   -webkit-box-flex: 0;
@@ -12144,6 +12229,309 @@ body {
   fill: #141414;
   width: 24px;
   height: 24px;
+}
+
+.btn-prev {
+  width: 29px;
+  height: 25px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-prev svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #454b60;
+  width: 29px;
+  height: 25px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-prev:hover svg {
+  fill: #040346;
+}
+
+.btn-back {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: #fff;
+  border: 1px solid #d8dadc;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-back svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #141414;
+  width: 32px;
+  height: 32px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-back:hover svg {
+  fill: #040346;
+}
+
+.btn-bar {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-bar svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  stroke: #454b60;
+  width: 34px;
+  height: 34px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-bar:hover svg {
+  stroke: #040346;
+}
+
+.btn-home {
+  display: flex;
+  width: 81px;
+  height: 44px;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-home span {
+  color: #a1a1a1;
+  text-align: center;
+  font-family: "Satoshi", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-home svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #a1a1a1;
+  width: 24px;
+  height: 24px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-home:hover span, .btn-home.active span {
+  color: #493bc5;
+}
+.btn-home:hover svg, .btn-home.active svg {
+  fill: #493bc5;
+}
+
+.btn-comparison {
+  display: flex;
+  width: 81px;
+  height: 44px;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-comparison span {
+  color: #a1a1a1;
+  text-align: center;
+  font-family: "Satoshi", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-comparison svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #a1a1a1;
+  width: 24px;
+  height: 24px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-comparison:hover span, .btn-comparison.active span {
+  color: #493bc5;
+}
+.btn-comparison:hover svg, .btn-comparison.active svg {
+  fill: #493bc5;
+}
+
+.btn-message {
+  display: flex;
+  width: 81px;
+  height: 44px;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-message span {
+  color: #a1a1a1;
+  text-align: center;
+  font-family: "Satoshi", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-message svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #a1a1a1;
+  width: 24px;
+  height: 24px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-message:hover span, .btn-message.active span {
+  color: #493bc5;
+}
+.btn-message:hover svg, .btn-message.active svg {
+  fill: #493bc5;
+}
+
+.btn-profile {
+  display: flex;
+  width: 81px;
+  height: 44px;
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-profile span {
+  color: #a1a1a1;
+  text-align: center;
+  font-family: "Satoshi", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-profile svg {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  fill: #a1a1a1;
+  width: 24px;
+  height: 24px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.btn-profile:hover span, .btn-profile.active span {
+  color: #493bc5;
+}
+.btn-profile:hover svg, .btn-profile.active svg {
+  fill: #493bc5;
 }
 
 .btn {
@@ -12422,6 +12810,10 @@ body {
   }
 }
 
+.wrapper-before-footer {
+  height: calc(100dvh - 92px);
+}
+
 .start-view {
   position: relative;
   z-index: 2;
@@ -12676,6 +13068,145 @@ body {
 .b2b-questionnaire .wrap-button .row-button .btn-primary {
   max-width: 100%;
   width: 72%;
+}
+
+.intro-screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+.intro-screen .top-header {
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  padding-left: 17px;
+  padding-right: 18px;
+  margin-top: 7px;
+  margin-bottom: 62px;
+}
+.intro-screen .wrap-progres-circle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 55px;
+}
+.intro-screen .wrap-text {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+.intro-screen .wrap-text h1, .intro-screen .wrap-text .h1 {
+  color: #141414;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  margin-bottom: 0;
+  min-height: 70px;
+}
+.intro-screen .wrap-text .text {
+  color: #737373;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  min-height: 71px;
+}
+.intro-screen .wrap-playing-games {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.intro-screen .wrap-playing-games .playing-games {
+  display: flex;
+  gap: 48px;
+  position: relative;
+  justify-content: center;
+}
+.intro-screen .wrap-playing-games .playing-games:nth-child(2n-1) {
+  left: -13px;
+}
+.intro-screen .wrap-playing-games .playing-games:nth-child(2n) {
+  right: -30px;
+}
+
+.calculating {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+.calculating .top-header {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.calculating .wrap-progres-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 42px;
+  margin-bottom: 60px;
+}
+.calculating .wrap-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.calculating .wrap-text h1, .calculating .wrap-text .h1 {
+  color: #141414;
+  text-align: center;
+  font-family: "Neue-Regrade", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.calculating .wrap-text .text {
+  color: #454b60;
+  text-align: center;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 92px;
+  padding: 10px 10px 38px 10px;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+  border-radius: 20px 20px 0px 0px;
+  background: #fff;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.16);
+  z-index: 3;
+  position: relative;
+}
+@media screen and (max-width: 380px) {
+  footer .btn-footer {
+    max-width: 81px;
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

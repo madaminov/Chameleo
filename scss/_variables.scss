@@ -3,24 +3,32 @@
 $font-stack-satoshi: 'Satoshi', sans-serif;
 $font-stack-neue-regrade: 'Neue-Regrade', sans-serif;
 $font-stack-popins: 'Poppins', sans-serif;
+$font-stack-inter: 'Inter', sans-serif;
 
 $font-size: 16px;
 $line-height: 24px;
 $font-weight: 400;
 
 $black: #141414 !default;
+$black-2: #333 !default;
 $white: #ffffff !default;
 $white-2: #f6f6f6 !default;
 $primary: #040346 !default;
 
 $blue-1: #6f60f4 !default;
 $blue-2: #5949e5 !default;
+$blue-3: #493bc5 !default;
 
 $gray-1: #b1afc4 !default;
 $gray-2: #e6e3ff !default;
 $gray-3: #efeff0 !default;
 $gray-4: #cecece !default;
 $gray-5: #f4f3ff !default;
+$gray-6: #454b60 !default;
+$gray-7: #e2dffd !default;
+$gray-8: #737373 !default;
+$gray-9: #d8dadc !default;
+$gray-10: #a1a1a1 !default;
 
 @mixin transition($transition) {
   -moz-transition: all $transition ease;
