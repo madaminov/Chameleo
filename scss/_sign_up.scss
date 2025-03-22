@@ -1,0 +1,96 @@
+.sign-up {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 42px;
+  padding-top: 52px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 64px;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 2;
+  .section-inner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+  }
+  .wrap-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    h1 {
+      color: $black;
+      text-align: center;
+      font-family: $font-stack-neue-regrade;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+    .text {
+      color: $black;
+      text-align: center;
+      font-family: $font-stack-satoshi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+  .wrap-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+  }
+  .text-help {
+    width: 100%;
+    color: $gray-6;
+    text-align: center;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    .link {
+      color: $blue-1;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}
+.sign-up-registration {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 40px;
+  .wrap-header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-self: stretch;
+    .section-form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      align-self: stretch;
+    }
+  }
+}

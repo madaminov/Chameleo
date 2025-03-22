@@ -59,14 +59,16 @@ body {
   }
 }
 ::placeholder {
-  /* Most modern browsers support this now. */
   color: $black;
-  font-feature-settings: 'liga' off, 'clig' off;
-  /* Callout - 15 R */
-  font-family: $font-stack-neue-regrade;
-  font-size: 15px;
+  font-family: $font-stack-satoshi;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px; /* 146.667% */
   letter-spacing: 0.03px;
+}
+a {
+  color: $blue-1;
+  font-weight: 400;
+  text-decoration: none;
 }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Chameleo-App</title>
+	<meta name="description" content="Chameleo-App" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div class="wrapper wrapper-gradient-two">
+			<div class="sign-up">
+				<div class="top-header">
+					<button class="btn-back">
+						<svg>
+							<use href="images/icon-back.svg#icon"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="section-inner mt-auto">
+					<div class="wrap-header">
+						<h1>Start your multicultural journey</h1>
+						<div class="text">A world of cultures, curated just for you.</div>
+					</div>
+					<div class="wrap-button">
+						<button class="btn-email">Continue with Email</button>
+						<button class="btn-google">Continue with Google</button>
+						<button class="btn-facebook">Continue with Facebook</button>
+					</div>
+				</div>
+				<div class="section-inner">
+					<div class="text-help">
+						Already have an account? <a href="" class="link">Log In</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+		let email = document.getElementById('email')
+		email.addEventListener('input', function (event) {
+			let name = event.target.getAttribute('name');
+			if (event.target.value.length > 0 && !EMAIL_REGEXP.test(event.target.value)) {
+				event.target.classList.add('is-invalid')
+				document.querySelector('.error_' + name).classList.remove('d-none')
+			} else {
+				event.target.classList.remove('is-invalid')
+				document.querySelector('.error_' + name).classList.add('d-none')
+			}
+		});
+		let password = document.getElementById('password')
+		password.addEventListener('input', function (event) {
+			let name = event.target.getAttribute('name');
+			if (event.target.value.length > 0 && event.target.value != '123456') {
+				event.target.classList.add('is-invalid')
+				document.querySelector('.error_' + name).classList.remove('d-none')
+			} else {
+				event.target.classList.remove('is-invalid')
+				document.querySelector('.error_' + name).classList.add('d-none')
+			}
+		});
+	</script>
+
+
+</body>
+
+</html>

@@ -29,6 +29,8 @@ $gray-7: #e2dffd !default;
 $gray-8: #737373 !default;
 $gray-9: #d8dadc !default;
 $gray-10: #a1a1a1 !default;
+$gray-11: #bebebe !default;
+$gray-12: #d9d9d9 !default;
 
 @mixin transition($transition) {
   -moz-transition: all $transition ease;
