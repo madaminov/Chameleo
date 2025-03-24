@@ -13765,6 +13765,77 @@ select:-webkit-autofill:focus {
   align-self: stretch;
 }
 
+.sign-up-in-username {
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+.sign-up-in-username .section-inner {
+  gap: 22px;
+  height: 100%;
+  flex-grow: 1;
+  margin-top: 58px;
+}
+.sign-up-in-username .form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+  height: 100%;
+  flex-grow: 1;
+}
+.sign-up-in-username .form .section-form {
+  width: 100%;
+}
+.sign-up-in-username .wrap-upload-photo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.sign-up-in-username .wrap-upload-photo .photo {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 67px;
+  background: #d9d9d9;
+  border-radius: 50%;
+}
+.sign-up-in-username .wrap-upload-photo .photo img {
+  width: 100%;
+  border-radius: 50%;
+}
+.sign-up-in-username .wrap-upload-photo .wrap-upload {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+}
+.sign-up-in-username .wrap-upload-photo .wrap-upload .text {
+  color: #141414;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 20px */
+}
+.sign-up-in-username .wrap-upload-photo .wrap-upload .form-upload-file {
+  background-image: url(../images/icon-upload.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+}
+.sign-up-in-username .wrap-upload-photo .wrap-upload .form-upload-file .input {
+  display: none;
+}
+.sign-up-in-username .wrap-button {
+  margin-top: 74px;
+}
+
 footer {
   display: flex;
   width: 100%;

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Chameleo-App</title>
+	<meta name="description" content="Chameleo-App" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div class="wrapper">
+			<div class="intro-screen">
+				<div class="top-header">
+					<button class="btn-prev">
+						<svg>
+							<use href="images/icon-prev.svg#icon"></use>
+						</svg>
+					</button>
+					<button class="btn-bar">
+						<svg>
+							<use href="images/icon-menu-hamburger.svg#icon"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="wrap-progres-circle">
+					<div class="progres-circle">
+						<svg width="128" height="128" viewBox="0 0 128 128" style="--value-progress: 0;"
+							class="circular-progress">
+							<circle class="bg"></circle>
+							<circle class="fg"></circle>
+						</svg>
+						<div class="text"><span class="numb">0</span>%</div>
+					</div>
+				</div>
+				<div class="wrap-text">
+					<h1>Creating your personal journey...</h1>
+					<div class="text">Please, don’t close this page.</div>
+				</div>
+				<div class="wrap-playing-games">
+					<div class="playing-games">
+						<img src="images/playing-games-1.svg" class="img-fluid" alt="">
+						<img src="images/playing-games-2.svg" class="img-fluid" alt="">
+						<img src="images/playing-games-3.svg" class="img-fluid" alt="">
+						<img src="images/playing-games-4.svg" class="img-fluid" alt="">
+					</div>
+					<div class="playing-games">
+						<img src="images/playing-games-5.svg" class="img-fluid" alt="">
+						<img src="images/playing-games-6.svg" class="img-fluid" alt="">
+						<img src="images/playing-games-7.svg" class="img-fluid" alt="">
+						<img src="images/playing-games-8.svg" class="img-fluid" alt="">
+					</div>
+					<div class="playing-games">
+						<img src="images/playing-games-9.svg" class="img-fluid" alt="">
+						<img src="images/playing-games-10.svg" class="img-fluid" alt="">
+						<img src="images/playing-games-11.svg" class="img-fluid" alt="">
+						<img src="images/playing-games-12.svg" class="img-fluid" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		function updateProgresCircle(numb) {
+			setTimeout(() => {
+				document.querySelector('.circular-progress').style.setProperty('--value-progress', numb);
+				const counter_update = document.querySelector('.progres-circle .numb');
+				const speed = 300;
+				const animate = () => {
+					const value = +numb;
+					const data = +counter_update.innerText;
+					const time = value / speed;
+					if (data < value) {
+						counter_update.innerText = Math.ceil(data + time);
+						setTimeout(animate, 1);
+					} else {
+						counter_update.innerText = value;
+					}
+
+				}
+				animate();
+			}, 1000)
+		}
+		updateProgresCircle(60)
+	</script>
+
+
+</body>
+
+</html>
