@@ -12273,7 +12273,7 @@ select:-webkit-autofill:focus {
 .calculating-progres-circle {
   width: 92.168px;
   height: 92.169px;
-  animation: 1.9s linear infinite spinner-border;
+  animation: 1.9s linear infinite spinner-border-rew;
 }
 
 @keyframes progress-animation {
@@ -12282,6 +12282,11 @@ select:-webkit-autofill:focus {
   }
   to {
     --progress: 100;
+  }
+}
+@keyframes spinner-border-rew {
+  to {
+    transform: rotate(-360deg) /* rtl:ignore */;
   }
 }
 .progress {
