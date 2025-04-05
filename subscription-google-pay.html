@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+   
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper-main">
+        <div class="wrapper wrapper-gradient-two">
+            <div class="subscription-apple-pay">
+                <div class="top-header">
+                    <button class="btn-back">
+						<svg>
+							<use href="images/icon-back.svg#icon"></use>
+						</svg>
+					</button>
+                <button class="btn-skip">Skip</button>
+                </div>
+                <div class="section-inner">
+                    <div class="wrap-header">
+                        <h1>Choose Your Trial</h1>
+                        <div class="text">Your password has been changed successfully</div>
+                    </div>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <img src="images/icon-double-check.svg" alt="Icon"/>
+                            <span>Cancel from the app</span>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="images/icon-double-check.svg" alt="Icon"/>
+                            <span>Enjoy your first 3 days, it's free</span>
+                        </div>
+                        <div class="benefit-item">
+                            <img src="images/icon-double-check.svg" alt="Icon"/>
+                            <span>Quick diagnosis & immediate solutions</span>
+                        </div>
+                    </div>
+                    <div class="subscription-options">
+                        <div class="row">
+                            <div class="col-6">
+                                <label class="subscription-card">
+                                    <input type="radio" name="subscription" value="monthly" class="subscription-radio">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="plan-title">Monthly</div>
+                                            <div class="plan-price">$20.00</div>
+                                            <div class="plan-description">Billed Monthly</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <label class="subscription-card">
+                                    <input type="radio" name="subscription" value="trial" class="subscription-radio">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="plan-title">3 days trial</div>
+                                            <div class="plan-price">Free</div>
+                                            <div class="plan-description">First 3 days free - Then $19/Month</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-buttons">
+                        <button class="btn btn-outline-secondary">
+                            <img src="images/icon-card.svg" alt="Credit Card Icon">
+                            Pay by card
+                        </button>
+                        <button class="btn btn-outline-secondary w-100">
+                            Pay by card
+                            <img src="images/icon-google-pay.svg" alt="Credit Card Icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        const subscriptionCards = document.querySelectorAll('.subscription-card');
+        
+        subscriptionCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const radio = this.querySelector('input[type="radio"]');
+                radio.checked = true;
+            });
+        });
+    });</script>
+</body>
+</html>
