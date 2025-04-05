@@ -1,4 +1,21 @@
 .btn-skip {
+  color: $black;
+  text-align: center;
+  font-family: $font-stack-satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  width: 100%;
+  @include transition(0.3s);
+  &:hover {
+    color: $primary;
+  }
+}
+.btn-skip-darkblue {
   color: $primary;
   text-align: center;
   font-family: $font-stack-satoshi;
@@ -75,6 +92,8 @@
     @include transition(0.3s);
   }
   &:hover {
+    border: 1px solid $gray-9;
+    background-color: $gray-9;
     svg {
       fill: $primary;
     }
@@ -365,7 +384,6 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  border-radius: 20px;
   border: 1px solid $gray-4;
   background-color: $white;
   @include border-radius(20px);
@@ -401,7 +419,6 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  border-radius: 20px;
   border: 1px solid $gray-4;
   background-color: $white;
   @include border-radius(20px);
@@ -437,7 +454,6 @@
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  border-radius: 20px;
   border: 1px solid $gray-4;
   background-color: $white;
   @include border-radius(20px);
@@ -447,6 +463,114 @@
     width: 24px;
     height: 24px;
     background-image: url(../images/icon-email.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+  }
+  &:hover {
+    border: 1px solid $white;
+    background-color: $white;
+  }
+}
+.btn-pay-by-card {
+  color: $black;
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: 100%;
+  height: 62px;
+  padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 1px solid $gray-4;
+  background-color: $white;
+  white-space: nowrap;
+  @include border-radius(20px);
+  @include transition(0.3s);
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/icon-card.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+  }
+  &:hover {
+    border: 1px solid $white;
+    background-color: $white;
+  }
+}
+.btn-pay-apple-card {
+  color: $black;
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: 100%;
+  height: 62px;
+  padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 1px solid $gray-4;
+  background-color: $white;
+  white-space: nowrap;
+  @include border-radius(20px);
+  @include transition(0.3s);
+  &::after {
+    content: '';
+    width: 60px;
+    height: 28px;
+    background-image: url(../images/icon-apple-pay.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+  }
+  &:hover {
+    border: 1px solid $white;
+    background-color: $white;
+  }
+}
+.btn-pay-google-card {
+  color: $black;
+  text-align: center;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: 100%;
+  height: 62px;
+  padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 1px solid $gray-4;
+  background-color: $white;
+  white-space: nowrap;
+  @include border-radius(20px);
+  @include transition(0.3s);
+  &::after {
+    content: '';
+    width: 60px;
+    height: 28px;
+    background-image: url(../images/icon-google-pay.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
