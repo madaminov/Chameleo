@@ -1,0 +1,46 @@
+.toast-container-custom {
+  width: 272px;
+  flex-shrink: 0;
+  border-radius: 21px;
+  background: $gray-12;
+  border: 0;
+  box-shadow: none;
+  .toast {
+    border: 0;
+    background: $gray-12;
+    border-radius: 21px;
+    padding: 18px 22px 27px 22px;
+    box-shadow: none;
+  }
+  .toast-header {
+    padding: 0;
+    width: 100%;
+    border: 0;
+    background: $gray-12;
+    .title {
+      color: $black;
+      font-family: $font-stack-popins;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.3px;
+    }
+  }
+  .toast-body {
+    padding: 20px 0px 0px 0px;
+  }
+  .wrap-button {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    .btn-no {
+      width: 91px;
+    }
+    .btn-yes {
+      width: 109px;
+    }
+  }
+}

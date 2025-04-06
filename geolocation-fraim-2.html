@@ -12,7 +12,7 @@
 <body>
 	<div class="wrapper-main">
 		<div class="wrapper wrapper-gradient-two">
-			<div class="b2b-questionnaire">
+			<div class="geolocation">
 				<div class="wrap-progress-bar">
 					<button class="btn-arrow-left">
 						<svg>
@@ -24,29 +24,52 @@
 						<div class="progress-bar" style="width: 50%"></div>
 					</div>
 				</div>
+
 				<div class="wrap-container">
-					<div class="text">
-						<h1>Do you want to be visible to other people?</h1>
-                        <p>
-                            By pressing this button, you confirm that people will see your location to connect with you. You can change it later in the settings.
-                        </p>
+					<div class="wrap-text-button">
+						<div class="text">
+							<h1>Can we track your location?</h1>
+							<p>
+								We will use it for tailored experience
+							</p>
+						</div>
+						<div class="wrap-button">
+							<div class="row-button">
+								<button class="btn-secondary">No</button>
+								<button class="btn-primary">Yes</button>
+							</div>
+						</div>
 					</div>
-					<div class="wrap-button">
-						<div class="row-button">
-							<button class="btn-secondary">No</button>
-							<button class="btn-primary">Yes</button>
-						</div>						
+					<div class="w-100">
+						<button class="btn-skip">Skip</button>
 					</div>
 				</div>
 
 			</div>
 		</div>
 	</div>
-
+	<div class="top-20-px  end-0 me-auto ms-auto position-fixed start-0 toast-container toast-container-custom">
+		<div id="liveToast" class="toast" role="alert" aria-live="assertive" data-bs-autohide="false"
+			aria-atomic="true">
+			<div class="toast-header">
+				<div class="title text-center">Allow to track location?</div>
+			</div>
+			<div class="toast-body text-center">
+				<div class="wrap-button">
+					<button class="btn-outline-secondary btn-no">No</button>
+					<button class="btn-outline-secondary btn-yes">Yes</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/bootstrap.bundle.min.js"></script>
 
-
+	<script>
+		const toastLiveExample = document.getElementById('liveToast')
+		const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+		toastBootstrap.show()
+	</script>
 
 </body>
 
