@@ -1,0 +1,204 @@
+.account-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    padding: 40px 20px 32px 20px;
+    z-index: 2;
+  position: relative;
+    .section-inner {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      align-self: stretch;
+    }
+    .settings-card {
+      display: flex;
+      align-items: center;
+      align-self: stretch;
+      gap: 16px;
+      width: 100%;
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid #CECECE;
+      background: $white;
+      color: $black;
+font-family: $font-stack-neue-regrade;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+      cursor: pointer;
+      transition: all 0.2s ease;
+  
+      &:hover {
+        background: #f9f9f9;
+      }
+  
+      .icon-circle {
+        display: flex;
+width: 42px;
+height: 42px;
+padding: 9px;
+justify-content: center;
+align-items: center;
+aspect-ratio: 1/1;
+border-radius: 63px;
+background: #F4F3FF;
+  
+       svg {
+          width: 24px;
+          height: 24px;
+          display: block;
+          fill: #6D20FF;
+        }
+      }
+    }
+  
+    .btn-delete {
+      margin-top: auto;
+      height: 62px;
+      display: flex;
+width: 100%;
+padding: 20px 149px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 20px;
+border: 1px solid #DB4446;
+background: $white;
+color: #DB4446;
+text-align:center;
+font-family: $font-stack-satoshi;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+white-space: nowrap;
+&:hover {
+  background: #f9f9f9;
+}
+    }
+    .wrap-header-type-2 {
+      gap: 12px;
+    }
+    .form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      align-self: stretch;
+      .section-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        align-self: stretch;
+      }
+    }
+    .text-help {
+      color: $gray-6;
+      text-align: center;
+      font-family: Satoshi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      .link {
+        color: $blue-1;
+        font-weight: 700;
+        text-decoration: none;
+      }
+    }
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 9999; 
+  }
+  
+  .modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px 24px;
+    gap: 24px;
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid #CECECE;
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+  }
+  
+  .modal-title {
+    color: $black;
+text-align: center;
+font-family: $font-stack-neue-regrade;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+  }
+  
+  .modal-text {
+    color: #727272;
+    text-align: center;
+    font-family: $font-stack-satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+  
+  .modal-actions {
+    display: flex;
+    width: calc(100% - 39px);
+    margin: 0 auto;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  
+  .btn-delete,
+  .btn-cancel {
+    width: 100%;
+    height: 62px;
+    padding: 20px 0;
+    border-radius: 20px;
+    border: 1px solid;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    text-align: center;
+font-family: $font-stack-satoshi;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .btn-delete {
+    color: #DB4446;
+    border-color: #DB4446;
+  }
+  
+  .btn-cancel {
+    color: #000;
+    border-color: #000;
+  }
+  
+  
+  

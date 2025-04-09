@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Chameleo-App</title>
+	<meta name="description" content="Chameleo-App" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="wrapper-main">
+    <div class="wrapper wrapper-gradient-two">
+        <div class="comparing-result wrapper-before-footer">
+            <div class="wrap-progress-bar">
+              <button class="btn-arrow-left">
+                <svg>
+                  <use href="images/icon-arrow-left.svg#icon"></use>
+                </svg>
+              </button>
+              <div class="progress-steps">
+                <div class="step active"></div>
+                <div class="step"></div>
+                <div class="step"></div>
+                <div class="step"></div>
+                <div class="step"></div>
+              </div>
+            </div>
+      
+            <div class="wrap-content">
+              <div class="media-box"></div>
+              <div class="wrap-text">
+                <h2 class="title">Communication Styles</h2>
+                <p class="description">
+                  Communication styles various in different countries so to communicate
+                  effectively learn other's country style
+                </p>
+              </div>
+              <button class="btn-primary">Start learning</button>
+            </div>
+          </div>
+      
+          <footer class="app-tab-bar">
+            <button class="btn-footer btn-home active">
+              <svg><use href="images/icon-home.svg#icon"></use></svg>
+              <span>Home</span>
+            </button>
+            <button class="btn-footer btn-comparison">
+              <svg><use href="images/icon-comparison.svg#icon"></use></svg>
+              <span>Comparison</span>
+            </button>
+            <button class="btn-footer btn-message">
+              <svg><use href="images/icon-message.svg#icon"></use></svg>
+              <span>Messages</span>
+            </button>
+            <button class="btn-footer btn-profile">
+              <svg><use href="images/icon-profile-2.svg#icon"></use></svg>
+              <span>Profile</span>
+            </button>
+          </footer>
+        </div>
+      
+        <script>
+            const steps = document.querySelectorAll(".progress-steps .step");
+          
+            steps.forEach((step) => {
+              step.addEventListener("click", () => {
+                steps.forEach((s) => s.classList.remove("active")); 
+                step.classList.add("active"); 
+              });
+            });
+          </script>
+          
+          
+      </body>
+      </html>
