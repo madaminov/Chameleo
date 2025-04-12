@@ -20,28 +20,35 @@
 						</svg>
 					</button>
 				</div>
-                <div class="section-inner">
-                    <div class="settings-card">
-                      <div class="icon-circle">
-                        <svg><use href="images/icon-notification.svg#icon"></use></svg>
-                      </div>
-                      <span>Notifications</span>
-                    </div>
-                    <div class="settings-card">
-                      <div class="icon-circle">
-                        <svg><use href="images/icon-language.svg#icon"></use></svg>
-                      </div>
-                      <span>Language</span>
-                    </div>
-                    <div class="settings-card">
-                      <div class="icon-circle">
-                        <svg><use href="images/icon-privacy.svg#icon"></use></svg>
-                      </div>
-                      <span>Privacy</span>
-                    </div>
-                  </div>
-                    <button class="btn-delete">Delete account</button>
-                  </div>
+				<div class="section-inner">
+					<div class="settings-card">
+						<div class="icon-circle">
+							<svg>
+								<use href="images/icon-notification.svg#icon"></use>
+							</svg>
+						</div>
+						<span>Notifications</span>
+					</div>
+					<div class="settings-card">
+						<div class="icon-circle">
+							<svg>
+								<use href="images/icon-language.svg#icon"></use>
+							</svg>
+						</div>
+						<span>Language</span>
+					</div>
+					<div class="settings-card">
+						<div class="icon-circle">
+							<svg>
+								<use href="images/icon-privacy.svg#icon"></use>
+							</svg>
+						</div>
+						<span>Privacy</span>
+					</div>
+				</div>
+				<button class="btn-delete mt-auto" data-bs-target="#alertModal" data-bs-toggle="modal">Delete
+					account</button>
+			</div>
 			<footer class="app-tab-bar">
 				<button class="btn-footer btn-home active">
 					<svg>
@@ -70,9 +77,29 @@
 			</footer>
 		</div>
 	</div>
+	<div class="modal fade alertModal" id="alertModal" aria-hidden="true" aria-labelledby="alertLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title" id="alertleLabel">Are you sure to delete your account?</div>
+				</div>
+				<div class="modal-body">
+					<p class="modal-text">We will remain your data during 30 days.<br>
+						After 30 days your account data will be permanently deleted.</p>
+				</div>
+				<div class="modal-footer">
+					<div class="modal-actions">
+						<button class="btn-delete flex-fill">Delete</button>
+						<button class="btn-cancel flex-fill" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>
+
 
 
 

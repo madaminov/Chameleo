@@ -19,6 +19,9 @@ $blue-1: #6f60f4 !default;
 $blue-2: #5949e5 !default;
 $blue-3: #493bc5 !default;
 $blue-4: #08add2 !default;
+$blue-5: #7366e7 !default;
+$blue-6: #6d20ff !default;
+$blue-7: #5649e7 !default;
 
 $gray-1: #b1afc4 !default;
 $gray-2: #e6e3ff !default;
@@ -32,6 +35,10 @@ $gray-9: #d8dadc !default;
 $gray-10: #a1a1a1 !default;
 $gray-11: #bebebe !default;
 $gray-12: #d9d9d9 !default;
+$gray-13: #ededed !default;
+$gray-14: #545454 !default;
+
+$red: #db4446 !default;
 
 @mixin transition($transition) {
   -moz-transition: all $transition ease;

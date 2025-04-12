@@ -1,0 +1,91 @@
+.account-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 40px 20px 32px 20px;
+  z-index: 2;
+  position: relative;
+  .section-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+  }
+  .settings-card {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    gap: 16px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1px solid $gray-4;
+    background: $white;
+    color: $black;
+    font-family: $font-stack-neue-regrade;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border: 2px solid $blue-5;
+    }
+
+    .icon-circle {
+      display: flex;
+      width: 42px;
+      height: 42px;
+      padding: 9px;
+      justify-content: center;
+      align-items: center;
+      aspect-ratio: 1/1;
+      border-radius: 63px;
+      background: $gray-5;
+      svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+        fill: $blue-6;
+      }
+    }
+  }
+
+  .wrap-header-type-2 {
+    gap: 12px;
+  }
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+    .section-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      align-self: stretch;
+    }
+  }
+  .text-help {
+    color: $gray-6;
+    text-align: center;
+    font-family: Satoshi;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    .link {
+      color: $blue-1;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}

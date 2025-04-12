@@ -1,3 +1,18 @@
+.progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  .progress-label {
+    color: $black;
+    font-family: $font-stack-satoshi;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.1px;
+  }
+}
 .progress {
   width: 100%;
   height: 8px;
