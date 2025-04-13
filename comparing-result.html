@@ -2,76 +2,233 @@
 <html lang="en">
 
 <head>
-	<title>Chameleo-App</title>
-	<meta name="description" content="Chameleo-App" />
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="css/style.css">
+  <title>Chameleo-App</title>
+  <meta name="description" content="Chameleo-App" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<div class="wrapper-main">
+  <div class="wrapper-main">
     <div class="wrapper wrapper-gradient-two">
-        <div class="comparing-result wrapper-before-footer">
-            <div class="wrap-progress-bar">
-              <button class="btn-arrow-left">
-                <svg>
-                  <use href="images/icon-arrow-left.svg#icon"></use>
-                </svg>
-              </button>
-              <div class="progress-steps">
-                <div class="step active"></div>
-                <div class="step"></div>
-                <div class="step"></div>
-                <div class="step"></div>
-                <div class="step"></div>
-              </div>
-            </div>
-      
-            <div class="wrap-content">
-              <div class="media-box"></div>
-              <div class="wrap-text">
-                <h2 class="title">Communication Styles</h2>
-                <p class="description">
-                  Communication styles various in different countries so to communicate
-                  effectively learn other's country style
-                </p>
-              </div>
-              <button class="btn-primary">Start learning</button>
+      <div class="comparing-result wrapper-before-footer">
+        <!--slide-->
+        <div id="carouselComparingIndicators" class="carousel slide comparing-carousel">
+          <div class="header-carousel">
+
+            <button class="btn-arrow-left">
+              <svg>
+                <use href="images/icon-arrow-left.svg#icon"></use>
+              </svg>
+            </button>
+
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselComparingIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselComparingIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselComparingIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselComparingIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselComparingIndicators" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
             </div>
           </div>
-      
-          <footer class="app-tab-bar">
-            <button class="btn-footer btn-home active">
-              <svg><use href="images/icon-home.svg#icon"></use></svg>
-              <span>Home</span>
-            </button>
-            <button class="btn-footer btn-comparison">
-              <svg><use href="images/icon-comparison.svg#icon"></use></svg>
-              <span>Comparison</span>
-            </button>
-            <button class="btn-footer btn-message">
-              <svg><use href="images/icon-message.svg#icon"></use></svg>
-              <span>Messages</span>
-            </button>
-            <button class="btn-footer btn-profile">
-              <svg><use href="images/icon-profile-2.svg#icon"></use></svg>
-              <span>Profile</span>
-            </button>
-          </footer>
+
+          <div class="carousel-inner">
+            <!--carousel-item-->
+            <div class="carousel-item active">
+              <div class="wrap-content wrap-content-communication">
+                <div class="media-box"></div>
+                <div class="wrap-text">
+                  <h2 class="title">Communication Styles</h2>
+                  <p class="description">
+                    Communication styles various in different countries so to communicate
+                    effectively learn other's country style
+                  </p>
+                </div>
+                <button class="carousel-control-next w-100 mt-auto" type="button"
+                  data-bs-target="#carouselComparingIndicators" data-bs-slide="next">Start learning
+                </button>
+              </div>
+            </div>
+            <!--carousel-item end-->
+
+            <!--carousel-item-->
+            <div class="carousel-item">
+              <div class="wrap-content wrap-content-county">
+                <div class="wrap-text">
+                  <div class="flag-box">
+                    <img src="images/icon-china.svg" alt="China flag" class="flag-icon">
+                    <h1 class="country-name">China</h1>
+                  </div>
+                  <p class="description">
+                    People are direct. They say exactly what they mean, even if it might sound a bit blunt.
+                    For example, if they don’t like something, they might say, “I don’t think this is a good idea.”
+                  </p>
+                </div>
+
+                <div class="example-area">
+                  <div class="example-box">
+                    <div class="example-badge">Example</div>
+                    <p class="example-text">
+                      If someone’s work needs improvement, they might say, “This isn’t good enough. Please redo it.”
+                      In other cultures people use more indirect language to avoid offending others, prioritize
+                      relationships, and maintain harmony.
+                    </p>
+                  </div>
+                </div>
+
+                <button class="carousel-control-next w-100 mt-auto" type="button"
+                  data-bs-target="#carouselComparingIndicators" data-bs-slide="next">Continue
+                </button>
+              </div>
+            </div>
+            <!--carousel-item end-->
+            <!--carousel-item-->
+            <div class="carousel-item">
+              <div class="wrap-content wrap-content-county">
+                <div class="wrap-text">
+                  <div class="flag-box">
+                    <img src="images/icon-usa.svg" alt="China flag" class="flag-icon">
+                    <h1 class="country-name">USA</h1>
+                  </div>
+                  <p class="description">
+                    People are more polite. They don’t always say exactly what they mean, and they try not to hurt
+                    anyone’s feelings. They might say something like, “Maybe we can try something else” instead of
+                    saying directly that something is wrong
+                  </p>
+                </div>
+
+                <div class="example-area">
+                  <div class="example-box">
+                    <div class="example-badge">Example</div>
+                    <p class="example-text">
+                      Instead of directly pointing out a problem, they might say, “This is good, but maybe we could
+                      consider a few changes?”
+                    </p>
+                  </div>
+                </div>
+
+                <button class="carousel-control-next w-100 mt-auto" type="button"
+                  data-bs-target="#carouselComparingIndicators" data-bs-slide="next">Continue
+                </button>
+              </div>
+            </div>
+            <!--carousel-item end-->
+            <!--carousel-item-->
+            <div class="carousel-item">
+              <div class="wrap-content wrap-content-county">
+                <div class="wrap-text">
+                  <div class="flag-box">
+                    <h1 class="country-name">Cultural clash </h1>
+                  </div>
+                  <p class="description">
+                    If someone’s work needs improvement, they might say, “This isn’t good enough. Please redo it. In
+                    other cultures people use more indirect language to avoid offending others, prioritize
+                    relationships, and maintain harmony.
+                  </p>
+                </div>
+                <div class="example-area">
+                  <div class="example-box">
+                    <div class="example-badge">Example 1</div>
+                    <p class="example-text">
+                      If someone’s work needs improvement, they might say, “This isn’t good enough. Please redo it. In
+                      other cultures people use more indirect language to avoid offending others, prioritize
+                      relationships, and maintain harmony.
+                    </p>
+                  </div>
+
+                  <div class="example-box">
+                    <div class="example-badge">Example 2</div>
+                    <p class="example-text">
+                      Instead of directly pointing out a problem, they might say, “This is good, but maybe we could
+                      consider a few changes?”
+                    </p>
+                  </div>
+                </div>
+                <button class="carousel-control-next w-100 mt-auto" type="button"
+                  data-bs-target="#carouselComparingIndicators" data-bs-slide="next">Continue
+                </button>
+              </div>
+            </div>
+            <!--carousel-item end-->
+            <!--carousel-item-->
+            <div class="carousel-item">
+              <div class="wrap-content wrap-content-summary">
+                <div class="wrap-text">
+                  <h1 class="title">Summary<br>(do and don’ts)</h1>
+                </div>
+                <div class="example-area">
+                  <div class="example-box">
+                    <div class="example-badge">Dos</div>
+                    <p class="example-text">
+                      In China, try to speak softly and carefully. Don’t be too blunt.<br>
+                      In the USA, being direct is okay, but make sure not to sound rude.
+                    </p>
+                  </div>
+                  <div class="example-box">
+                    <div class="example-badge">Don’ts</div>
+                    <p class="example-text">
+                      In China, try to speak softly and carefully. Don’t be too blunt.<br>
+                      In the USA, being direct is okay, but make sure not to sound rude.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="wrap-button mt-auto">
+                  <button class="btn-secondary">Explore more</button>
+                  <button class="btn-primary">Finish</button>
+                </div>
+              </div>
+            </div>
+            <!--carousel-item end-->
+          </div>
+
+
+          <!--end slide-->
+
+
         </div>
-      
-        <script>
-            const steps = document.querySelectorAll(".progress-steps .step");
-          
-            steps.forEach((step) => {
-              step.addEventListener("click", () => {
-                steps.forEach((s) => s.classList.remove("active")); 
-                step.classList.add("active"); 
-              });
-            });
-          </script>
-          
-          
-      </body>
-      </html>
+
+
+
+
+      </div>
+
+      <footer class="app-tab-bar">
+        <button class="btn-footer btn-home active">
+          <svg>
+            <use href="images/icon-home.svg#icon"></use>
+          </svg>
+          <span>Home</span>
+        </button>
+        <button class="btn-footer btn-comparison">
+          <svg>
+            <use href="images/icon-comparison.svg#icon"></use>
+          </svg>
+          <span>Comparison</span>
+        </button>
+        <button class="btn-footer btn-message">
+          <svg>
+            <use href="images/icon-message.svg#icon"></use>
+          </svg>
+          <span>Messages</span>
+        </button>
+        <button class="btn-footer btn-profile">
+          <svg>
+            <use href="images/icon-profile-2.svg#icon"></use>
+          </svg>
+          <span>Profile</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
