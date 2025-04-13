@@ -12129,6 +12129,7 @@ a {
 
 .alertModal .modal-dialog {
   max-width: 353px;
+  margin: 0 auto;
 }
 .alertModal .modal-content {
   display: flex;
