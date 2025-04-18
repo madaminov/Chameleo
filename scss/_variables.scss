@@ -42,8 +42,11 @@ $gray-13: #ededed !default;
 $gray-14: #545454 !default;
 
 $violet-1: #dbbbfd !default;
+$violet-2: #7E237F !default;
 
 $red: #db4446 !default;
+
+$green-1: #BBFFD4 !default;
 
 @mixin transition($transition) {
   -moz-transition: all $transition ease;

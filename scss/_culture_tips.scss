@@ -1,0 +1,120 @@
+.culture-tips {
+    width: 100%;
+    height: calc(100dvh - 92px);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px 0px 20px;
+    position: relative;
+    z-index: 2;
+    overflow-y: auto;
+  
+    .section-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      width: 100%;
+      height: calc(100dvh - 10px);
+    }
+  
+    .wrap-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      align-self: stretch;
+  
+      h1 {
+        color: $black;
+        font-family: $font-stack-neue-regrade;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+      }
+    }
+  
+    .tip-badge {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+  
+      .tips-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-family: $font-stack-satoshi;
+        border-radius: 35px;
+        line-height: 1;
+        white-space: nowrap;
+        height: 36px;
+        padding: 6px 10px;
+
+        &.purple {
+            background-color: $blue-1;
+            color: $white;
+            padding: 6px 20px;
+
+        }
+        &.white{
+            background-color: $white;
+            border: 1px solid rgba(0, 0, 0, 0.20);
+            color: $black;
+            padding: 6px 10px;
+
+        }
+      }
+    }
+    .finland {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+    .tips-country-title {
+      color: $black;
+      font-family: $font-stack-neue-regrade;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0;
+    }
+  
+    .tips-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      
+  
+      .tip-item {
+        display: flex;
+align-items: center;
+gap: 12px;
+align-self: stretch;
+
+  
+        img {
+            width: 116px;
+            height: 114px;
+          border-radius: 4px;
+          object-fit: cover;
+        }
+  
+        p {
+            color: $black;
+            font-family: $font-stack-neue-regrade;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
