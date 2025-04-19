@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compare Countries</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper-main">
+    <div class="wrapper wrapper-gradient-two">
+      <div class="compare-countries wrapper-before-footer">
+        <div class="top-header">
+          <button class="btn-back">
+            <svg>
+              <use href="images/icon-back.svg#icon"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="section-inner">
+          <div class="wrap-header">
+            <h1>Compare countries to start <br> learning</h1>
+
+            <div class="input-search-wrapper">
+              <input type="text" placeholder="Search by country" />
+              <button class="btn-search">
+                <svg class="icon-search">
+                  <use href="images/icon-search.svg#icon"></use>
+                </svg>
+              </button>
+            </div>
+
+            <div class="choose-label">Choose 2 countries to compare</div>
+          </div>
+
+          <div class="comparison-content">
+            <div class="countries-grid">
+                <div class="country-card">
+                    <img src="images/usa-pic.png" alt="USA" />
+                    <div class="country-label">USA</div>
+                  </div>
+                  <div class="country-card">
+                    <img src="images/india-pic.png" alt="India" />
+                    <div class="country-label">India</div>
+                  </div>
+                  <div class="country-card">
+                    <img src="images/russia-pic.png" alt="Russia" />
+                    <div class="country-label">Russia</div>
+                  </div>
+                  <div class="country-card">
+                    <img src="images/china-pic.png" alt="China" />
+                    <div class="country-label">China</div>
+                  </div>
+                  <div class="country-card">
+                    <img src="images/france-pic.png" alt="France" />
+                    <div class="country-label">France</div>
+                  </div>
+                  <div class="country-card">
+                    <img src="images/spain-pic.png" alt="Spain" />
+                    <div class="country-label">Spain</div>
+                  </div>                  
+            </div>
+
+            <button class="btn-primary">Continue</button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="app-tab-bar">
+        <button class="btn-footer btn-home active">
+          <svg>
+            <use href="images/icon-home.svg#icon"></use>
+          </svg>
+          <span>Home</span>
+        </button>
+        <button class="btn-footer btn-comparison">
+          <svg>
+            <use href="images/icon-comparison.svg#icon"></use>
+          </svg>
+          <span>Comparison</span>
+        </button>
+        <button class="btn-footer btn-message">
+          <svg>
+            <use href="images/icon-message.svg#icon"></use>
+          </svg>
+          <span>Messages</span>
+        </button>
+        <button class="btn-footer btn-profile">
+          <svg>
+            <use href="images/icon-profile-2.svg#icon"></use>
+          </svg>
+          <span>Profile</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const countryCards = document.querySelectorAll('.country-card');
+    const continueBtn = document.querySelector('.btn-primary');
+    let selectedCountries = [];
+
+    countryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const countryName = card.querySelector('.country-label').textContent;
+
+        if (card.classList.contains('active')) {
+          card.classList.remove('active');
+          selectedCountries = selectedCountries.filter(c => c !== countryName);
+        } else {
+          if (selectedCountries.length < 2) {
+            card.classList.add('active');
+            selectedCountries.push(countryName);
+          }
+        }
+
+        continueBtn.disabled = selectedCountries.length !== 2;
+      });
+    });
+
+    continueBtn.addEventListener('click', () => {
+      if (selectedCountries.length === 2) {
+        alert(`Comparing: ${selectedCountries.join(' vs ')}`);
+      }
+    });
+  </script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
