@@ -12076,6 +12076,10 @@ a {
   scrollbar-width: none;
 }
 
+.gx-6 {
+  --bs-gutter-x: 12px;
+}
+
 .toast-container-custom {
   width: 272px;
   flex-shrink: 0;
@@ -14714,7 +14718,7 @@ select:-webkit-autofill:focus {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px 20px 0px 20px;
+  padding: 40px 20px 20px 20px;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -15720,7 +15724,7 @@ footer {
   gap: 20px;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px 20px 0px 20px;
+  padding: 40px 20px 20px 20px;
   position: relative;
   z-index: 2;
   overflow-y: auto;
@@ -15777,14 +15781,14 @@ footer {
   color: #141414;
   padding: 6px 10px;
 }
-.culture-tips .finland {
+.culture-tips .wrap-country {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
   align-self: stretch;
 }
-.culture-tips .finland .tips-country-title {
+.culture-tips .wrap-country .tips-country-title {
   color: #141414;
   font-family: "Neue-Regrade", sans-serif;
   font-size: 24px;
@@ -15793,24 +15797,24 @@ footer {
   line-height: normal;
   margin: 0;
 }
-.culture-tips .finland .tips-list {
+.culture-tips .wrap-country .tips-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.culture-tips .finland .tips-list .tip-item {
+.culture-tips .wrap-country .tips-list .tip-item {
   display: flex;
   align-items: center;
   gap: 12px;
   align-self: stretch;
 }
-.culture-tips .finland .tips-list .tip-item img {
+.culture-tips .wrap-country .tips-list .tip-item img {
   width: 116px;
   height: 114px;
   border-radius: 4px;
   object-fit: cover;
 }
-.culture-tips .finland .tips-list .tip-item p {
+.culture-tips .wrap-country .tips-list .tip-item p {
   color: #141414;
   font-family: "Neue-Regrade", sans-serif;
   font-size: 16px;
@@ -15827,7 +15831,7 @@ footer {
   gap: 20px;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px 0px 0px 20px;
+  padding: 40px 0px 20px 20px;
   position: relative;
   z-index: 2;
   overflow-y: auto;
@@ -15837,7 +15841,6 @@ footer {
   flex-direction: column;
   gap: 32px;
   width: 100%;
-  height: calc(100dvh - 66px);
 }
 .podcast .wrap-header {
   display: flex;
@@ -15884,58 +15887,42 @@ footer {
   color: #141414;
   padding: 6px 10px;
 }
-.podcast .podcast-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  padding-right: 21px;
+
+.podcast-wrap {
+  padding-right: 20px;
 }
-.podcast .podcast-wrap .podcast-list {
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-}
-.podcast .podcast-wrap .podcast-list .podcast-card {
+.podcast-wrap .podcast-card {
   width: 100%;
   flex: 1;
   height: 138px;
-  min-width: 170px;
   border-radius: 16px;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-end;
   text-align: center;
   letter-spacing: -0.3px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-position: 100% 0px;
 }
-.podcast .podcast-wrap .podcast-list .podcast-card.blue {
+.podcast-wrap .podcast-card.blue {
   background-color: #8f98ff;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA1IiBoZWlnaHQ9IjkzIiB2aWV3Qm94PSIwIDAgMTA1IDkzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTg4LjIzMDUgLTg3LjQ2NjJDMTA3LjQyNSAtODguOTA0IDEzMS4xMiAtOTguNDQ2NSAxNDQuNDg3IC04NC41NjcxQzE1OC4zMjcgLTcwLjE5NzcgMTQ1LjQ4NCAtNDYuMDc5IDE0Ny4yNDggLTI2LjE4NjdDMTQ4LjQ4MSAtMTIuMjg5MiAxNTQuNjY5IDAuMzIxNzg1IDE1My4yNDcgMTQuMjAxMUMxNTEuNTAyIDMxLjIyNzggMTQ5LjIxOSA0OC44ODU1IDEzOC4yMTMgNjEuOTczOUMxMjUuNDM2IDc3LjE2ODUgMTA3LjkzNiA4OS4zMTM0IDg4LjIzMDUgOTEuNTE2NUM2Ny40MTIzIDkzLjg0MzkgNDQuODQyMSA4OC4zNTM3IDI5LjQzMDggNzQuMTM1N0MxNC42NDAzIDYwLjQ5MDQgMTQuMjgxIDM4LjI0ODcgOS4zMjc3MyAxOC43MjI5QzQuNzU3NDEgMC43MDY1NTggLTMuNjA1NzYgLTE3LjMzMjQgMS43MDk2MSAtMzUuMTQyM0M3LjA4MDk2IC01My4xMzk3IDIxLjcxOTkgLTY2Ljg2NzYgMzcuNzY4OSAtNzYuNTczM0M1Mi44NzAzIC04NS43MDU5IDcwLjY0MTYgLTg2LjE0ODcgODguMjMwNSAtODcuNDY2MloiIGZpbGw9IiMxODJBODgiLz4KPC9zdmc+Cg==");
-  background-repeat: no-repeat;
-  background-position: 100% 0px;
-  padding: 10px 42px 10px 42px;
 }
-.podcast .podcast-wrap .podcast-list .podcast-card.purple {
+.podcast-wrap .podcast-card.purple {
   background-color: #dbbbfd;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDUiIGhlaWdodD0iOTMiIHZpZXdCb3g9IjAgMCAxMDUgOTMiIGZpbGw9Im5vbmUiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTg4LjIzMDUgLTg3LjQ2NjJDMTA3LjQyNSAtODguOTA0IDEzMS4xMiAtOTguNDQ2NSAxNDQuNDg3IC04NC41NjcxQzE1OC4zMjcgLTcwLjE5NzcgMTQ1LjQ4NCAtNDYuMDc5IDE0Ny4yNDggLTI2LjE4NjdDMTQ4LjQ4MSAtMTIuMjg5MiAxNTQuNjY5IDAuMzIxNzg1IDE1My4yNDcgMTQuMjAxMUMxNTEuNTAyIDMxLjIyNzggMTQ5LjIxOSA0OC44ODU1IDEzOC4yMTMgNjEuOTczOUMxMjUuNDM2IDc3LjE2ODUgMTA3LjkzNiA4OS4zMTM0IDg4LjIzMDUgOTEuNTE2NUM2Ny40MTIzIDkzLjg0MzkgNDQuODQyMSA4OC4zNTM3IDI5LjQzMDggNzQuMTM1N0MxNC42NDAzIDYwLjQ5MDQgMTQuMjgxIDM4LjI0ODcgOS4zMjc3MyAxOC43MjI5QzQuNzU3NDEgMC43MDY1NTggLTMuNjA1NzYgLTE3LjMzMjQgMS43MDk2MSAtMzUuMTQyM0M3LjA4MDk2IC01My4xMzk3IDIxLjcxOTkgLTY2Ljg2NzYgMzcuNzY4OSAtNzYuNTczM0M1Mi44NzAzIC04NS43MDU5IDcwLjY0MTYgLTg2LjE0ODcgODguMjMwNSAtODcuNDY2MloiIGZpbGw9IiNCQzk5RkYiLz4KPC9zdmc+");
-  background-repeat: no-repeat;
-  background-position: 100% 0px;
-  padding: 10px 42px 10px 42px;
 }
-.podcast .podcast-wrap .podcast-list .podcast-card.green {
+.podcast-wrap .podcast-card.green {
   background-color: #BBFFD4;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDUiIGhlaWdodD0iOTMiIHZpZXdCb3g9IjAgMCAxMDUgOTMiIGZpbGw9Im5vbmUiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTg4LjIzMDUgLTg3LjQ2NjJDMTA3LjQyNSAtODguOTA0IDEzMS4xMiAtOTguNDQ2NSAxNDQuNDg3IC04NC41NjcxQzE1OC4zMjcgLTcwLjE5NzcgMTQ1LjQ4NCAtNDYuMDc5IDE0Ny4yNDggLTI2LjE4NjdDMTQ4LjQ4MSAtMTIuMjg5MiAxNTQuNjY5IDAuMzIxNzg1IDE1My4yNDcgMTQuMjAxMUMxNTEuNTAyIDMxLjIyNzggMTQ5LjIxOSA0OC44ODU1IDEzOC4yMTMgNjEuOTczOUMxMjUuNDM2IDc3LjE2ODUgMTA3LjkzNiA4OS4zMTM0IDg4LjIzMDUgOTEuNTE2NUM2Ny40MTIzIDkzLjg0MzkgNDQuODQyMSA4OC4zNTM3IDI5LjQzMDggNzQuMTM1N0MxNC42NDAzIDYwLjQ5MDQgMTQuMjgxIDM4LjI0ODcgOS4zMjc3MyAxOC43MjI5QzQuNzU3NDEgMC43MDY1NTggLTMuNjA1NzYgLTE3LjMzMjQgMS43MDk2MSAtMzUuMTQyM0M3LjA4MDk2IC01My4xMzk3IDIxLjcxOTkgLTY2Ljg2NzYgMzcuNzY4OSAtNzYuNTczM0M1Mi44NzAzIC04NS43MDU5IDcwLjY0MTYgLTg2LjE0ODcgODguMjMwNSAtODcuNDY2MloiIGZpbGw9IiNCQzk5RkYiLz4KPC9zdmc+");
-  background-repeat: no-repeat;
-  background-position: 100% 0px;
-  padding: 10px 28px 10px 29px;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI5IiBoZWlnaHQ9Ijg0IiB2aWV3Qm94PSIwIDAgMTI5IDg0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEzOC4zMDkgMzcuNDQ5OEMxMzIuNjI4IDUzLjU5MTkgMTMxLjQ3MSA3Ni4wNDYgMTE2LjI5NyA4Mi40NDU5QzEwMC41ODcgODkuMDcxOCA4Ni45Mjk5IDcwLjczNzYgNzEuMzExNSA2NS43MDYyQzYwLjM5OTkgNjIuMTkxIDQ4LjcxMTcgNjMuMTQxMiAzOC43NDk1IDU3LjQ2NEMyNi41MjgxIDUwLjQ5OTMgMTQuMDIwNCA0Mi44OTA2IDguMDMxOTIgMjkuNjQ0NkMxLjA3OTc3IDE0LjI2NjkgLTEuOTA5MSAtMy45NzQ0OSAzLjM3NDYgLTIwLjc4M0M4Ljk1NjU5IC0zOC41NDAzIDIxLjA0OTggLTU1LjE4NDkgMzcuMTk5OCAtNjMuMTQzOEM1Mi42OTkzIC03MC43ODIxIDY5LjU5MzggLTYzLjgzOTIgODYuMDU5OCAtNjEuNTMxMkMxMDEuMjUzIC01OS40MDE2IDExNy44IC02MC4zNjE5IDEyOS4zNTMgLTUwLjIyNjlDMTQxLjAyOCAtMzkuOTg1MSAxNDYuMjE5IC0yMy41NjQ1IDE0Ny44OCAtNy4zMDEwOEMxNDkuNDQzIDguMDAxOTkgMTQzLjUxNCAyMi42NTgxIDEzOC4zMDkgMzcuNDQ5OFoiIGZpbGw9IiMxNUE4NjciLz4KPC9zdmc+Cg==");
 }
-.podcast .podcast-wrap .podcast-list .podcast-card.violet {
+.podcast-wrap .podcast-card.violet {
   background-color: #7E237F;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDUiIGhlaWdodD0iOTMiIHZpZXdCb3g9IjAgMCAxMDUgOTMiIGZpbGw9Im5vbmUiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTg4LjIzMDUgLTg3LjQ2NjJDMTA3LjQyNSAtODguOTA0IDEzMS4xMiAtOTguNDQ2NSAxNDQuNDg3IC04NC41NjcxQzE1OC4zMjcgLTcwLjE5NzcgMTQ1LjQ4NCAtNDYuMDc5IDE0Ny4yNDggLTI2LjE4NjdDMTQ4LjQ4MSAtMTIuMjg5MiAxNTQuNjY5IDAuMzIxNzg1IDE1My4yNDcgMTQuMjAxMUMxNTEuNTAyIDMxLjIyNzggMTQ5LjIxOSA0OC44ODU1IDEzOC4yMTMgNjEuOTczOUMxMjUuNDM2IDc3LjE2ODUgMTA3LjkzNiA4OS4zMTM0IDg4LjIzMDUgOTEuNTE2NUM2Ny40MTIzIDkzLjg0MzkgNDQuODQyMSA4OC4zNTM3IDI5LjQzMDggNzQuMTM1N0MxNC42NDAzIDYwLjQ5MDQgMTQuMjgxIDM4LjI0ODcgOS4zMjc3MyAxOC43MjI5QzQuNzU3NDEgMC43MDY1NTggLTMuNjA1NzYgLTE3LjMzMjQgMS43MDk2MSAtMzUuMTQyM0M3LjA4MDk2IC01My4xMzk3IDIxLjcxOTkgLTY2Ljg2NzYgMzcuNzY4OSAtNzYuNTczM0M1Mi44NzAzIC04NS43MDU5IDcwLjY0MTYgLTg2LjE0ODcgODguMjMwNSAtODcuNDY2MloiIGZpbGw9IiNCQzk5RkYiLz4KPC9zdmc+");
-  background-repeat: no-repeat;
-  background-position: 100% 0px;
-  padding: 10px 60px 10px 60px;
 }
-.podcast .podcast-wrap .podcast-list .podcast-card .podcast-text {
+.podcast-wrap .podcast-card .podcast-text {
   color: #fff;
   white-space: nowrap;
   text-align: center;
@@ -15945,7 +15932,7 @@ footer {
   font-weight: 500;
   line-height: normal;
 }
-.podcast .podcast-wrap .podcast-list .podcast-card .podcast-text-black {
+.podcast-wrap .podcast-card .podcast-text-black {
   color: #141414;
   white-space: nowrap;
   text-align: center;
@@ -15960,7 +15947,7 @@ footer {
 .compare-countries {
   display: flex;
   flex-direction: column;
-  padding: 40px 20px 0;
+  padding: 40px 20px 20px 20px;
   height: calc(100dvh - 92px);
   overflow-y: auto;
   gap: 20px;
@@ -15972,7 +15959,6 @@ footer {
   flex-direction: column;
   gap: 24px;
   width: 100%;
-  height: calc(100% - 36px);
 }
 .compare-countries .section-inner .wrap-header {
   display: flex;
@@ -16020,7 +16006,7 @@ footer {
 .compare-countries .section-inner .wrap-header .input-search-wrapper .btn-search .icon-search {
   width: 24px;
   height: 24px;
-  fill: #808080;
+  fill: #bcc1cd;
 }
 .compare-countries .section-inner .wrap-header .choose-label {
   color: #454b60;
@@ -16046,7 +16032,7 @@ footer {
   width: 100%;
   height: 128px;
   border-radius: 12px;
-  border: 2px solid #CECECE;
+  border: 2px solid #cecece;
   overflow: hidden;
   cursor: pointer;
   display: flex;
