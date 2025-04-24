@@ -14611,9 +14611,11 @@ select:-webkit-autofill:focus {
 
 .change-name {
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 27px;
   padding: 40px 20px 32px 20px;
+  z-index: 2;
 }
 .change-name .section-inner {
   gap: 22px;
@@ -14705,6 +14707,7 @@ select:-webkit-autofill:focus {
   width: 100%;
   font-weight: 400;
   line-height: 125%;
+  background: #fff;
 }
 
 .questionnaire_comparison {
@@ -15954,11 +15957,6 @@ footer {
   flex-direction: column;
   gap: 24px;
   width: 100%;
-<<<<<<< HEAD
-=======
-  height: calc(100% - 36px);
-  gap: 32px;
->>>>>>> a5e5a6fe72e438c76283a491c7a6b4cbc358f892
 }
 .compare-countries .section-inner .wrap-header {
   display: flex;
