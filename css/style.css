@@ -16613,7 +16613,7 @@ footer {
   height: calc(100dvh - 92px);
   display: flex;
   flex-direction: column;
-  padding: 48px 20px 20px;
+  padding: 48px 20px 20px 20px;
   overflow: auto;
   position: relative;
   z-index: 2;
@@ -16647,6 +16647,7 @@ footer {
   grid-template-columns: 1fr 1fr;
   column-gap: 17px;
   row-gap: 14px;
+  padding-bottom: 60px;
   position: relative;
 }
 .gallery .section-inner .gallery-grid .image-card {
