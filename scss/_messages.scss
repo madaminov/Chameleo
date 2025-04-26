@@ -225,6 +225,10 @@
       background-position: right center;
       background-repeat: no-repeat;
       outline: none;
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.50);
+        opacity: 1;
+      }
     }
   }
   .box-find-countries {
