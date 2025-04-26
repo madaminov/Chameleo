@@ -1,0 +1,9 @@
+.dropdown-menu {
+  border: 1px solid $gray-9;
+  background: $white;
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: $black;
+    background-color: $gray-2;
+  }
+}

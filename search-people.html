@@ -12,113 +12,104 @@
 <body>
   <div class="wrapper-main">
     <div class="wrapper wrapper-gradient-two">
-      
-        <div class="search-people wrapper-before-footer">
-            <div class="section-inner">
-              <div class="wrap-header">
-                <h2>Search like-minded people</h2>
-                <div class="input-search-wrapper">
-                    <div class="input-search">
-                      <div class="selected-country">
-                        <span class="country-tag">
-                          Finland
-                          <button class="btn-remove">
-                            <svg class="icon-x">
-                              <use href="images/icon-close.svg#icon" />
-                            </svg>
-                          </button>
-                        </span>
-                      </div>
-                      <input type="text" placeholder="Search by country" />
-                      <button class="btn-search">
-                        <svg class="icon-search">
-                          <use href="images/icon-search.svg#icon" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  
+
+      <div class="search-people wrapper-before-footer">
+        <div class="section-inner">
+          <div class="wrap-header">
+            <h2>Search like-minded people</h2>
+            <div class="search-countries-wrapper">
+              <div class="box-find-countries">
+                <div class="tagCountry" onclick="removeTag(this)">Finland<button class="btn-remove"></button></div>
               </div>
+              <div class="control-find-input">
+                <input type="text" placeholder="Search by country" name="countries" id="countries"
+                  data-bs-toggle="dropdown" aria-expanded="false" autocomplete="off" />
+                <ul class="dropdown-menu" id="list-countries">
+                </ul>
+              </div>
+            </div>
+
+          </div>
           <div class="people-inner">
-              <div class="results-count">Found 24 people</div>
-          
-              <div class="people-list">
-                <div class="person-card">
-                  <div class="avatar">
-                    <img src="images/david-wayne.png" alt="David Wayne" />
-                  </div>
-                  <div class="person-name">David Wayne</div>
-                  <button class="btn-add">
-                    <svg class="icon-plus">
-                      <use href="images/icon-plus.svg#Plus"></use>
-                    </svg>
-                    Add
-                  </button>
+            <div class="results-count">Found 24 people</div>
+
+            <div class="people-list">
+              <div class="person-card">
+                <div class="avatar">
+                  <img src="images/david-wayne.png" alt="David Wayne" />
                 </div>
-                <div class="person-card">
-                    <div class="avatar">
-                      <img src="images/edward-davidson.png" alt="Edward Davidson" />
-                    </div>
-                    <div class="person-name">Edward Davidson</div>
-                    <button class="btn-add">
-                      <svg class="icon-plus">
-                        <use href="images/icon-plus.svg#Plus"></use>
-                      </svg>
-                      Add
-                    </button>
-                  </div>
-                  <div class="person-card">
-                    <div class="avatar">
-                      <img src="images/angela-kelly.png" alt="Angela Kelly" />
-                    </div>
-                    <div class="person-name">Angela Kelly</div>
-                    <button class="btn-add">
-                      <svg class="icon-plus">
-                        <use href="images/icon-plus.svg#Plus"></use>
-                      </svg>
-                      Add
-                    </button>
-                  </div>
-                  <div class="person-card">
-                    <div class="avatar">
-                      <img src="images/jean-dare.png" alt="Jean Dare" />
-                    </div>
-                    <div class="person-name">Jean Dare</div>
-                    <button class="btn-add">
-                      <svg class="icon-plus">
-                        <use href="images/icon-plus.svg#Plus"></use>
-                      </svg>
-                      Add
-                    </button>
-                  </div>
-                  <div class="person-card">
-                    <div class="avatar">
-                      <img src="images/cayla-rath.png" alt="Cayla Rath" />
-                    </div>
-                    <div class="person-name">Cayla Rath</div>
-                    <button class="btn-add">
-                      <svg class="icon-plus">
-                        <use href="images/icon-plus.svg#Plus"></use>
-                      </svg>
-                      Add
-                    </button>
-                  </div>
-                  <div class="person-card">
-                    <div class="avatar">
-                      <img src="images/erin-turcotte.png" alt="Erin Turcotte" />
-                    </div>
-                    <div class="person-name">Erin Turcotte</div>
-                    <button class="btn-add">
-                      <svg class="icon-plus">
-                        <use href="images/icon-plus.svg#Plus"></use>
-                      </svg>
-                      Add
-                    </button>
-                  </div>
+                <div class="person-name">David Wayne</div>
+                <button class="btn-add">
+                  <svg class="icon-plus">
+                    <use href="images/icon-plus.svg#Plus"></use>
+                  </svg>
+                  Add
+                </button>
               </div>
+              <div class="person-card">
+                <div class="avatar">
+                  <img src="images/edward-davidson.png" alt="Edward Davidson" />
+                </div>
+                <div class="person-name">Edward Davidson</div>
+                <button class="btn-add">
+                  <svg class="icon-plus">
+                    <use href="images/icon-plus.svg#Plus"></use>
+                  </svg>
+                  Add
+                </button>
+              </div>
+              <div class="person-card">
+                <div class="avatar">
+                  <img src="images/angela-kelly.png" alt="Angela Kelly" />
+                </div>
+                <div class="person-name">Angela Kelly</div>
+                <button class="btn-add">
+                  <svg class="icon-plus">
+                    <use href="images/icon-plus.svg#Plus"></use>
+                  </svg>
+                  Add
+                </button>
+              </div>
+              <div class="person-card">
+                <div class="avatar">
+                  <img src="images/jean-dare.png" alt="Jean Dare" />
+                </div>
+                <div class="person-name">Jean Dare</div>
+                <button class="btn-add">
+                  <svg class="icon-plus">
+                    <use href="images/icon-plus.svg#Plus"></use>
+                  </svg>
+                  Add
+                </button>
+              </div>
+              <div class="person-card">
+                <div class="avatar">
+                  <img src="images/cayla-rath.png" alt="Cayla Rath" />
+                </div>
+                <div class="person-name">Cayla Rath</div>
+                <button class="btn-add">
+                  <svg class="icon-plus">
+                    <use href="images/icon-plus.svg#Plus"></use>
+                  </svg>
+                  Add
+                </button>
+              </div>
+              <div class="person-card">
+                <div class="avatar">
+                  <img src="images/erin-turcotte.png" alt="Erin Turcotte" />
+                </div>
+                <div class="person-name">Erin Turcotte</div>
+                <button class="btn-add">
+                  <svg class="icon-plus">
+                    <use href="images/icon-plus.svg#Plus"></use>
+                  </svg>
+                  Add
+                </button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
       <footer class="app-tab-bar">
         <button class="btn-footer btn-home">
           <svg>
@@ -150,6 +141,52 @@
   </div>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/countries.js"></script>
+  <script>
+    const listCountries = document.getElementById('list-countries');
+    elemetBox = '';
+    listCountries.innerHTML = '';
+    document.getElementById('countries').addEventListener('focus', function (event) {
+      elemetBox = '';
+      listCountries.innerHTML = '';
+      for (i = 0; i <= 10; i++) {
+        console.log(i)
+        elemetBox += `<li><span class="dropdown-item" data-code="${countries[i]['code']}" onclick="addTags(this)">${countries[i]['name']}</span></li>`;
+      }
+      listCountries.insertAdjacentHTML('afterBegin', elemetBox);
+    });
+    document.getElementById('countries').addEventListener('input', function (event) {
+      console.log(event.target.value);
+      listCountries.innerHTML = '';
+      elemetBox = '';
+      for (const country in countries) {
+        if (countries[country]['name'].toLowerCase().includes(event.target.value.toLowerCase())) {
+          console.log(countries[country]['code'])
+          elemetBox += `<li><span class="dropdown-item" data-code="${countries[country]['code']}" onclick="addTags(this)">${countries[country]['name']}</span></li>`;
+        }
+      }
+      if (elemetBox == '') {
+        elemetBox += `<li><span class="dropdown-item disabled">No found</span></li>`;
+      }
+      listCountries.insertAdjacentHTML('afterBegin', elemetBox);
+    });
+    function addTags(event) {
+      code = event.getAttribute('data-code');
+      console.log(event.textContent);
+      tag = `<div class="tagCountry" onclick="removeTag(this)">${event.textContent}<button class="btn-remove" ></button></div>`;
+      document.querySelector('.box-find-countries').insertAdjacentHTML('afterBegin', tag);
+      document.getElementById('countries').value = ''
+      document.querySelector('.box-find-countries').classList.remove('d-none');
+    }
+    function removeTag(event) {
+      event.remove();
+      if (document.querySelector('.box-find-countries').querySelectorAll('.tagCountry').length < 1) {
+        document.querySelector('.box-find-countries').classList.add('d-none');
+      }
+    }
+
+
+  </script>
 </body>
 
 </html>

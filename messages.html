@@ -12,131 +12,158 @@
 <body>
   <div class="wrapper-main">
     <div class="wrapper wrapper-gradient-two">
-      
+
       <div class="messages wrapper-before-footer">
         <div class="section-inner">
-        <div class="wrap-header">
-        <h2>Search like-minded people</h2>
-        <div class="input-search-wrapper">
-          <input type="text" placeholder="Search messages" />
-          <button class="btn-search">
-            <svg class="icon-search">
-              <use href="images/icon-search.svg#icon"></use>
-            </svg>
-          </button>
-        </div>
-</div>
-<div class="connect-inner">
-<div class="connect-title">Connect in Finland</div>
-        <div class="connect-avatars">
-          <div class="connect-avatar">
-            <img src="images/avatar-1.png" alt="User 1" />
-          </div>
-          <div class="connect-avatar">
-            <img src="images/avatar-2.png" alt="User 2" />
-          </div>
-          <div class="connect-avatar">
-            <img src="images/avatar-3.png" alt="User 3" />
-          </div>
-          <div class="connect-avatar">
-            <img src="images/avatar-4.png" alt="User 4" />
-          </div>
-          <div class="connect-avatar">
-            <img src="images/avatar-5.png" alt="User 5" />
-          </div>
-          <div class="connect-avatar">
-            <img src="images/avatar-6.png" alt="User 6" />
-          </div>
-        </div>
-    </div>
-    <div class="message-wrapper">
-    <div class="message-title">Messages</div>
-        <div class="messages-list">
-          <div class="message-card">
-            <div class="avatar">
-              <img src="images/david-wayne.png" alt="User 1" />
-            </div>
-            <div class="message-content">
-              <div class="name">David Wayne</div>
-              <div class="preview">Thanks a bunch! Have a great day!</div>
-            </div>
-            <div class="message-meta">
-              <div class="time">14:20</div>
-              <div class="message-badge">
-                <div class="badge-text">5</div>
-            </div>
-          </div>
-          </div>
-
-          <div class="message-card">
-            <div class="avatar">
-              <img src="images/edward-davidson.png" alt="User 2" />
-            </div>
-            <div class="message-content">
-              <div class="name">Edward Davidson</div>
-              <div class="preview">Let’s meet on Monday</div>
-            </div>
-            <div class="message-meta">
-                <div class="time">22:20  09/05</div>
-                <div class="message-badge">
-                  <div class="badge-text">12</div>
+          <div class="wrap-header">
+            <h2>Search like-minded people</h2>
+            <div class="search-countries-wrapper">
+              <div class="box-find-countries d-none"></div>
+              <div class="control-find-input">
+                <input type="text" placeholder="Search by country" name="countries" id="countries"
+                  data-bs-toggle="dropdown" aria-expanded="false" autocomplete="off" />
+                <ul class="dropdown-menu" id="list-countries">
+                </ul>
               </div>
             </div>
           </div>
-          <div class="message-card">
-            <div class="avatar">
-              <img src="images/angela-kelly.png" alt="User 3" />
-            </div>
-            <div class="message-content">
-              <div class="name">Angela Kelly</div>
-              <div class="preview">Appreciate it! See you soon!</div>
-            </div>
-            <div class="message-meta">
-                <div class="time">10:45  08/05</div>
-                <div class="message-badge">
-                  <div class="badge-text">1</div>
+          <div class="connect-inner">
+            <div class="connect-title">Connect in Finland</div>
+            <div class="connect-avatars">
+              <div class="connect-avatar">
+                <img src="images/avatar-1.png" alt="User 1" />
+              </div>
+              <div class="connect-avatar">
+                <img src="images/avatar-2.png" alt="User 2" />
+              </div>
+              <div class="connect-avatar">
+                <img src="images/avatar-3.png" alt="User 3" />
+              </div>
+              <div class="connect-avatar">
+                <img src="images/avatar-4.png" alt="User 4" />
+              </div>
+              <div class="connect-avatar">
+                <img src="images/avatar-5.png" alt="User 5" />
+              </div>
+              <div class="connect-avatar">
+                <img src="images/avatar-6.png" alt="User 6" />
               </div>
             </div>
           </div>
-          <div class="message-card">
-            <div class="avatar">
-              <img src="images/jean-dare.png" alt="User 4" />
-            </div>
-            <div class="message-content">
-              <div class="name">Jean Dare</div>
-              <div class="preview">Hooray!</div>
-            </div>
-            <div class="message-meta">
-                <div class="time">10:45  08/05</div>              
-            </div>
-          </div>
-          <div class="message-card">
-            <div class="avatar">
-              <img src="images/cayla-rath.png" alt="User 5" />
-            </div>
-            <div class="message-content">
-              <div class="name">Cayla Rath</div>
-              <div class="preview">See you soon!</div>
-            </div>
-            <div class="message-meta">
-                <div class="time">10:45  08/05</div>             
-            </div>
-          </div>
-          <div class="message-card">
-            <div class="avatar">
-              <img src="images/erin-turcotte.png" alt="User 6" />
-            </div>
-            <div class="message-content">
-              <div class="name">Erin Turcotte</div>
-              <div class="preview">See you soon!</div>
-            </div>
-            <div class="message-meta">
-                <div class="time">19:35  02/05</div>             
+          <div class="message-wrapper">
+            <div class="message-title">Messages</div>
+            <div class="messages-list">
+              <!--message-card-->
+              <div class="message-card">
+                <div class="avatar">
+                  <img src="images/david-wayne.png" alt="User 1" />
+                </div>
+                <div class="message-body">
+                  <div class="wrap-name-time">
+                    <div class="name">David Wayne</div>
+                    <div class="time">14:20</div>
+                  </div>
+                  <div class="message-meta">
+                    <div class="preview">Thanks a bunch! Have a great day! 😊</div>
+                    <div class="message-badge">
+                      <div class="badge-text">5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end message-card-->
+              <!--message-card-->
+              <div class="message-card">
+                <div class="avatar">
+                  <img src="images/edward-davidson.png" alt="User 2" />
+                </div>
+                <div class="message-body">
+                  <div class="wrap-name-time">
+                    <div class="name">Edward Davidson</div>
+                    <div class="time">22:20 09/05</div>
+                  </div>
+                  <div class="message-meta">
+                    <div class="preview">Great, thanks so much! 💫</div>
+                    <div class="message-badge">
+                      <div class="badge-text">12</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end message-card-->
+              <!--message-card-->
+              <div class="message-card">
+                <div class="avatar">
+                  <img src="images/angela-kelly.png" alt="User 3" />
+                </div>
+                <div class="message-body">
+                  <div class="wrap-name-time">
+                    <div class="name">Angela Kelly</div>
+                    <div class="time">10:45 08/05</div>
+                  </div>
+                  <div class="message-meta">
+                    <div class="preview">Appreciate it! See you soon! 🚀</div>
+                    <div class="message-badge">
+                      <div class="badge-text">1</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end message-card-->
+              <!--message-card-->
+              <div class="message-card">
+                <div class="avatar">
+                  <img src="images/jean-dare.png" alt="User 4" />
+                </div>
+                <div class="message-body">
+                  <div class="wrap-name-time">
+                    <div class="name">Angela Kelly</div>
+                    <div class="time">20:10 05/05</div>
+                  </div>
+                  <div class="message-meta">
+                    <div class="preview">Hooray! 🎉</div>
+                    <div class="message-badge">
+                      <div class="badge-text">1</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end message-card-->
+              <!--message-card-->
+              <div class="message-card">
+                <div class="avatar">
+                  <img src="images/cayla-rath.png" alt="User 5" />
+                </div>
+                <div class="message-body">
+                  <div class="wrap-name-time">
+                    <div class="name">Cayla Rath</div>
+                    <div class="time">10:45 08/05</div>
+                  </div>
+                  <div class="message-meta">
+                    <div class="preview">See you soon!</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end message-card-->
+              <!--message-card-->
+              <div class="message-card">
+                <div class="avatar">
+                  <img src="images/erin-turcotte.png" alt="User 6" />
+                </div>
+                <div class="message-body">
+                  <div class="wrap-name-time">
+                    <div class="name">Erin Turcotte</div>
+                    <div class="time">19:35 02/05</div>
+                  </div>
+                  <div class="message-meta">
+                    <div class="preview">See you soon!</div>
+                  </div>
+                </div>
+              </div>
+              <!-- end message-card-->
             </div>
           </div>
         </div>
-    </div>
-</div>
       </div>
       <footer class="app-tab-bar">
         <button class="btn-footer btn-home">
@@ -169,6 +196,52 @@
   </div>
 
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/countries.js"></script>
+  <script>
+    const listCountries = document.getElementById('list-countries');
+    elemetBox = '';
+    listCountries.innerHTML = '';
+    document.getElementById('countries').addEventListener('focus', function (event) {
+      elemetBox = '';
+      listCountries.innerHTML = '';
+      for (i = 0; i <= 10; i++) {
+        console.log(i)
+        elemetBox += `<li><span class="dropdown-item" data-code="${countries[i]['code']}" onclick="addTags(this)">${countries[i]['name']}</span></li>`;
+      }
+      listCountries.insertAdjacentHTML('afterBegin', elemetBox);
+    });
+    document.getElementById('countries').addEventListener('input', function (event) {
+      console.log(event.target.value);
+      listCountries.innerHTML = '';
+      elemetBox = '';
+      for (const country in countries) {
+        if (countries[country]['name'].toLowerCase().includes(event.target.value.toLowerCase())) {
+          console.log(countries[country]['code'])
+          elemetBox += `<li><span class="dropdown-item" data-code="${countries[country]['code']}" onclick="addTags(this)">${countries[country]['name']}</span></li>`;
+        }
+      }
+      if (elemetBox == '') {
+        elemetBox += `<li><span class="dropdown-item disabled">No found</span></li>`;
+      }
+      listCountries.insertAdjacentHTML('afterBegin', elemetBox);
+    });
+    function addTags(event) {
+      code = event.getAttribute('data-code');
+      console.log(event.textContent);
+      tag = `<div class="tagCountry" onclick="removeTag(this)">${event.textContent}<button class="btn-remove" ></button></div>`;
+      document.querySelector('.box-find-countries').insertAdjacentHTML('afterBegin', tag);
+      document.getElementById('countries').value = ''
+      document.querySelector('.box-find-countries').classList.remove('d-none');
+    }
+    function removeTag(event) {
+      event.remove();
+      if (document.querySelector('.box-find-countries').querySelectorAll('.tagCountry').length < 1) {
+        document.querySelector('.box-find-countries').classList.add('d-none');
+      }
+    }
+
+
+  </script>
 </body>
 
 </html>

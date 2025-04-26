@@ -1,25 +1,25 @@
 .messages {
+  width: 100%;
+  height: calc(100dvh - 92px);
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0px 20px 20px;
+  gap: 32px;
+  z-index: 2;
+  position: relative;
+  overflow: auto;
+  .section-inner {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: calc(100dvh - 92px);
-    display: flex;
-    flex-direction: column;
-    padding: 60px 20px 20px 20px;
+    height: 100%;
     gap: 32px;
-    z-index: 2;
-    position: relative;
-    overflow: auto;
-  .section-inner{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: calc(100% - 106px);
-    gap: 32px;
-  .wrap-header {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-
-    h2 {
+    .wrap-header {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding-right: 20px;
+      h2 {
         color: $black;
         font-family: $font-stack-satoshi;
         font-size: 14px;
@@ -27,195 +27,238 @@
         font-weight: 500;
         line-height: 125%; /* 17.5px */
         margin-bottom: 0;
+      }
     }
-
-    .input-search-wrapper {
+    .connect-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      align-self: stretch;
       width: 100%;
-      position: relative;
-
-      input {
+      .connect-title {
+        color: $black;
+        font-family: $font-stack-neue-regrade;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .connect-avatars {
         display: flex;
-        height: 56px;
+        gap: 8px;
+        overflow: auto;
         width: 100%;
-        padding: 16px;
-        align-items: center;
-        border-radius: 10px;
-        gap: 10px;
-        border: 1px solid $gray-9;
-        background: $white;
-        font-family: $font-stack-satoshi;
-
-        &::placeholder {
-          color: rgba(0, 0, 0, 0.5);
-          opacity: 1;
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+        &::-webkit-scrollbar-button {
+          width: 2px;
+          height: 0px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .connect-avatar {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          overflow: hidden;
+          flex-shrink: 0;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
-
-      .btn-search {
-        position: absolute;
-        top: 50%;
-        right: 14px;
-        transform: translateY(-50%);
-        background: none;
-        border: none;
-        cursor: pointer;
-
-        .icon-search {
-          width: 24px;
-          height: 24px;
-          fill: $gray-15;
-        }
+    }
+    .message-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      .message-title {
+        color: $black;
+        font-family: $font-stack-neue-regrade;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
       }
     }
   }
-  .connect-inner {
-    display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 16px;
-align-self: stretch;
-.connect-title{
-    color: $black;
-font-family: $font-stack-neue-regrade;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
 }
-  .connect-avatars {
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .message-title {
+    color: $black;
+    font-family: $font-stack-neue-regrade;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .message-card {
     display: flex;
-    gap: 8px;
-  
-    .connect-avatar {
-      width: 64px;
-      height: 64px;
+    padding: 16px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px;
+    align-self: stretch;
+    flex-wrap: nowrap;
+    border-radius: 16px;
+    border: 1px solid $gray-4;
+    background: $white;
+    .message-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      flex: 1 0 0;
+    }
+    .avatar {
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       overflow: hidden;
-      flex-shrink: 0;
-  
+      flex: 0 0 auto;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
-  }
-}
-.message-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    .message-title{
+    .wrap-name-time {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+      .name {
         color: $black;
-    font-family: $font-stack-neue-regrade;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    }
-  .messages-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    .message-title{
-        color: $black;
-    font-family: $font-stack-neue-regrade;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    }
-  
-    .message-card {
-        display: flex;
-        padding: 16px;
-        align-items: flex-start;
-        align-content: flex-start;
-        gap: 16px;
-        align-self: stretch;
-        flex-wrap: wrap;
-        border-radius: 16px;
-border: 1px solid $gray-4;
-background: $white;
-  
-      .avatar {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        overflow: hidden;
-  
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        font-family: $font-stack-neue-regrade;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        white-space: nowrap;
       }
-  
-      .message-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-  
-        .name {
-            color: $black;
-            font-family: $font-stack-neue-regrade;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            white-space: nowrap;
-        }
-  
-        .preview {
-            color: $gray-8;
-            font-family: $font-stack-satoshi;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            white-space: nowrap;
-        }
+      .time {
+        color: $gray-18;
+        text-align: right;
+        font-family: $font-stack-satoshi;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
       }
-  
-      .message-meta {
-        flex: 1;
+    }
+    .message-meta {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      width: 100%;
+      flex-wrap: nowrap;
+      .preview {
+        color: $gray-8;
+        font-family: $font-stack-satoshi;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .message-badge {
         display: flex;
-        flex-direction: column;
-        gap: 8px;
-        .time {
-            color: $gray-18;
-text-align: right;
-font-family: $font-stack-satoshi;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+        margin-left: auto;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+        height: 18px;
+        min-width: 16px;
+        border-radius: 4px;
+        background: $blue-11;
+
+        .badge-text {
+          color: $blue-12;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 1;
+          margin: 0;
+          padding: 0;
         }
-        .message-badge {
-            display: flex;
-            margin-left: auto;
-            justify-content: center;
-            align-items: center;
-            width: 16px;
-            height: 18px;
-            min-width: 16px;
-            border-radius: 4px;
-            background: $blue-11;
-          
-            .badge-text {
-              color: $blue-12;
-              font-size: 12px;
-              font-weight: 700;
-              line-height: 1;
-              margin: 0;     
-              padding: 0;   
-            }
-          }
-          
       }
     }
   }
 }
+.search-countries-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  min-height: 56px;
+  padding: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  gap: 10px;
+  border: 1px solid $gray-9;
+  background: $white;
+  font-family: $font-stack-satoshi;
+  transition: all 0.3s ease;
+  .control-find-input {
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 50%;
+    transition: all 0.3s ease;
+    input {
+      width: 100%;
+      border: none;
+      border: none;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4LjAzMSAxNi42MTY4TDIyLjMxMzcgMjAuODk5NUwyMC44OTk1IDIyLjMxMzdMMTYuNjE2OCAxOC4wMzFDMTUuMDc2OSAxOS4yNjMgMTMuMTI0IDIwIDExIDIwQzYuMDMyIDIwIDIgMTUuOTY4IDIgMTFDMiA2LjAzMiA2LjAzMiAyIDExIDJDMTUuOTY4IDIgMjAgNi4wMzIgMjAgMTFDMjAgMTMuMTI0IDE5LjI2MyAxNS4wNzY5IDE4LjAzMSAxNi42MTY4Wk0xNi4wMjQ3IDE1Ljg3NDhDMTcuMjQ3NSAxNC42MTQ2IDE4IDEyLjg5NTYgMTggMTFDMTggNy4xMzI1IDE0Ljg2NzUgNCAxMSA0QzcuMTMyNSA0IDQgNy4xMzI1IDQgMTFDNCAxNC44Njc1IDcuMTMyNSAxOCAxMSAxOEMxMi44OTU2IDE4IDE0LjYxNDYgMTcuMjQ3NSAxNS44NzQ4IDE2LjAyNDdMMTYuMDI0NyAxNS44NzQ4WiIgZmlsbD0iIzgwODA4MCIvPgo8L3N2Zz4K');
+      background-position: right center;
+      background-repeat: no-repeat;
+      outline: none;
+    }
+  }
+  .box-find-countries {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    width: auto;
+    max-width: 100%;
+    flex: 0 0 auto;
+    transition: all 0.3s ease;
+    .tagCountry {
+      color: $white;
+      font-family: $font-stack-satoshi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 20px */
+      display: flex;
+      padding: 4px 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      border-radius: 4px;
+      background: $blue-5;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      .btn-remove {
+        width: 12px;
+        height: 12px;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuOTk5OTggNC44ODg5M0w5Ljg4ODkgMUwxMSAyLjExMTExTDcuMTExMDggNi4wMDAwM0wxMSA5Ljg4ODlMOS44ODg5IDExTDUuOTk5OTggNy4xMTExNEwyLjExMTExIDExTDEgOS44ODg5TDQuODg4ODkgNi4wMDAwM0wxIDIuMTExMTFMMi4xMTExMSAxTDUuOTk5OTggNC44ODg5M1oiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=');
+        border: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+      }
+    }
   }
 }

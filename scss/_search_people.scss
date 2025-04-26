@@ -1,133 +1,49 @@
 .search-people {
-    width: 100%;
-    height: calc(100dvh - 92px);
+  width: 100%;
+  height: calc(100dvh - 92px);
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px 20px 20px;
+  overflow: auto;
+  position: relative;
+  z-index: 2;
+
+  .section-inner {
     display: flex;
     flex-direction: column;
-    padding: 60px 20px 20px 20px;
-    overflow: auto;
-    position: relative;
-    z-index: 2;
-  
-    .section-inner {
+    width: 100%;
+    gap: 32px;
+    .wrap-header {
       display: flex;
       flex-direction: column;
-      width: 100%;
-      height: 100%;
-      gap: 32px;
-  
-      .wrap-header {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-  
-        h2 {
-            color: $black;
-            font-family: $font-stack-satoshi;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 125%; 
-            margin-bottom: 0;
-        }
-  
-        .input-search-wrapper {
-          width: 100%;
-          position: relative;
-  
-          .input-search {
-            display: flex;
-        height: 56px;
-        width: 100%;
-        padding: 16px;
-        align-items: center;
-        border-radius: 10px;
-        gap: 10px;
-        border: 1px solid $gray-9;
-        background: $white;
+      gap: 6px;
+      h2 {
+        color: $black;
         font-family: $font-stack-satoshi;
-  
-            .country-tag {
-                display: flex;
-                padding: 4px 8px;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-                border-radius: 4px;
-background: $blue-5;
-color: $white;
-font-family: $font-stack-satoshi;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 125%; 
-  
-              .btn-remove {
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                padding: 0;
-                border: none;
-                background: transparent;
-  
-                .icon-x {
-                  width: 12px;
-                  height: 12px;
-                  fill: $white;
-                }
-              }
-            }
-  
-            input {
-              flex: 1;
-              min-width: 120px;
-              border: none;
-              outline: none;
-              background: transparent;
-              font-family: $font-stack-satoshi;
-              font-size: 16px;
-              padding: 8px 0;
-  
-              &::placeholder {
-                color: rgba(0, 0, 0, 0.5);
-              }
-            }
-  
-            .btn-search {
-              position: absolute;
-              top: 50%;
-              right: 14px;
-              transform: translateY(-50%);
-              background: none;
-              border: none;
-              cursor: pointer;
-  
-              .icon-search {
-                width: 24px;
-                height: 24px;
-                fill: $gray-15;
-              }
-            }
-          }
-        }
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 125%;
+        margin-bottom: 0;
       }
-      .people-inner {
-        display: flex;
-        flex-direction: column;
-    gap: 12px;
+    }
+    .people-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
       .results-count {
         color: $black;
-font-family: $font-stack-satoshi;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 125%; 
+        font-family: $font-stack-satoshi;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 125%;
       }
-  
+
       .people-list {
         display: flex;
         flex-direction: column;
         gap: 12px;
-  
         .person-card {
           display: flex;
           align-items: center;
@@ -137,20 +53,21 @@ line-height: 125%;
           border: 1px solid $gray-4;
           border-radius: 16px;
           background: $white;
-  
+          transition: all 0.3s ease;
+          &:hover {
+            border: 1px solid $blue-5;
+          }
           .avatar {
             width: 42px;
             height: 42px;
             border-radius: 50%;
             overflow: hidden;
-  
             img {
               width: 100%;
               height: 100%;
               object-fit: cover;
             }
           }
-  
           .person-name {
             flex: 1;
             font-size: 16px;
@@ -158,7 +75,6 @@ line-height: 125%;
             font-family: $font-stack-neue-regrade;
             color: $black;
           }
-  
           .btn-add {
             display: flex;
             align-items: center;
@@ -170,7 +86,6 @@ line-height: 125%;
             font-size: 16px;
             font-weight: 500;
             cursor: pointer;
-  
             .icon-plus {
               width: 24px;
               height: 24px;
@@ -180,6 +95,5 @@ line-height: 125%;
         }
       }
     }
-    }
   }
-  
+}
