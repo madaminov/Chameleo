@@ -1,0 +1,312 @@
+.profile {
+    width: 100%;
+    height: calc(100dvh - 92px);
+    overflow: hidden auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 20px 50px 20px;
+    z-index: 2;
+    box-sizing: border-box;
+   .profile-wrapper {
+    display: flex;
+      flex-direction: column;
+      gap: 16px;
+    .profile-header {
+        display: flex;
+justify-content: space-between;
+align-items: flex-end;
+    }
+  
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+  
+      .profile-name {
+        display: flex;
+        width: 199px;
+justify-content: space-between;
+align-items: flex-end;
+        h1 {
+color: $black;
+font-family: $font-stack-satoshi;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px; 
+margin-bottom: 0;
+        }
+        .icon-pen{
+            width: 24px;
+height: 24px;
+        }
+      }
+  
+      .profile-email {
+        color: $black;
+font-family: $font-stack-neue-regrade;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 0;
+      }
+    }
+  
+    .profile-avatar {
+        width: 67.163px;
+        height: 78.157px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .avatar-background {
+        position: absolute;
+        width: 67.163px;
+        height: 78.157px;
+        background-image: url('../images/avatar-vector.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform: rotate(357deg);
+        z-index: 0;
+      }
+      
+      .avatar-photo {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        z-index: 1;
+      }
+      
+      
+    p {
+        color: $black;
+font-family: $font-stack-neue-regrade;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+    }
+}
+    .settings-inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        align-self: stretch;
+  
+      .settings-card {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+        gap: 16px;
+        width: 100%;
+        padding: 16px;
+        border-radius: 16px;
+        border: 1px solid $gray-4;
+        background: $white;
+        color: $black;
+        font-family: $font-stack-neue-regrade;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    
+        &:hover {
+          border: 2px solid $blue-5;
+        }
+    
+        .icon-circle {
+          display: flex;
+          width: 42px;
+          height: 42px;
+          padding: 9px;
+          justify-content: center;
+          align-items: center;
+          aspect-ratio: 1/1;
+          border-radius: 63px;
+          background: $gray-5;
+          svg {
+            width: 24px;
+            height: 24px;
+            display: block;
+            fill: $blue-6;
+          }
+        }
+      }
+    }
+    .achievements-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        .title {
+          color: $black;
+          font-family: $font-stack-neue-regrade;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 0px;
+          width: 100%;
+        }
+        .wrap-achievements-card {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          padding: 32px 24px 24px 24px;
+          justify-content: center;
+          align-items: center;
+          gap: 24px;
+          border-radius: 30px;
+          border: 1px solid $gray-4;
+          background: $white;
+        }
+        .achievements-card {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+          gap: 16px;
+        }
+    
+        .achievement-row {
+          display: flex;
+          width: 100%;
+          align-items: flex-start;
+          gap: 24px;
+          border-bottom: 2px solid $gray-17;
+          padding-bottom: 16px;
+          &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+    
+        .achievement-icon {
+          width: 42px;
+          height: 42px;
+          background: $blue-1;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+    
+          img {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+          }
+        }
+    
+        .achievement-content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+        }
+    
+        .achievement-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 24px;
+    
+          .title {
+            font-family: $font-stack-neue-regrade;
+            font-size: 16px;
+            font-weight: 700;
+            color: $black;
+          }
+    
+          .achievement-progress-count {
+            color: $gray-18;
+            font-family: $font-stack-satoshi;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+    
+        .progress-bar {
+          height: 8px;
+          border-radius: 5px;
+          background: $gray-2;
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 16px;
+    
+          &.purple::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: $blue-1;
+            border-radius: 5px;
+          }
+    
+          &.full::before {
+            width: 100%;
+          }
+    
+          &.medium::before {
+            width: 37%;
+          }
+    
+          &.low::before {
+            width: 22%;
+          }
+        }
+    
+        .achievement-subtext {
+          color: $gray-18;
+          font-family: $font-stack-satoshi;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+    
+        .btn-primary {
+          width: 192px;
+          align-self: center;
+        }
+      }
+  
+    .btn-logout {
+      width: 100%;
+      display: flex;
+height: 62px;
+padding: 20px 149px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 20px;
+border: 1px solid $blue-1;
+background: $white;
+color: $blue-1;
+text-align: center;
+font-family: $font-stack-satoshi;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+white-space: nowrap;
+    }
+  }
+  
