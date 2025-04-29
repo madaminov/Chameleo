@@ -109,7 +109,7 @@
   
           </div>
 
-        <button class="btn-logout">Log out</button>
+        <button class="btn-logout" data-bs-target="#alertModal" data-bs-toggle="modal">Log out</button>
 
       </section>
 
@@ -134,7 +134,21 @@
 
     </div>
   </div>
-
+  <div class="modal fade alertModal" id="alertModal" aria-hidden="true" aria-labelledby="alertLabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title" id="alertleLabel">Log out of your account?</div>
+				</div>
+				<div class="modal-footer">
+					<div class="modal-actions">
+						<button class="btn-delete flex-fill">Log out</button>
+						<button class="btn-cancel flex-fill" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
