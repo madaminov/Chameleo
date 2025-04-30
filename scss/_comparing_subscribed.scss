@@ -287,37 +287,21 @@
       }
     }
 
-    .progress-bar {
+    .progress {
       height: 8px;
+      background-color: $gray-2;
       border-radius: 5px;
-      background: $gray-2;
-      position: relative;
       overflow: hidden;
       margin-bottom: 16px;
-
-      &.purple::before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background: $blue-1;
-        border-radius: 5px;
-      }
-
-      &.full::before {
-        width: 100%;
-      }
-
-      &.medium::before {
-        width: 37%;
-      }
-
-      &.low::before {
-        width: 22%;
-      }
     }
-
+  
+    .progress-bar {
+      background-color: $blue-1;
+      border-radius: 5px;
+    }
+    .w-100 { width: 100%; }
+    .w-37 { width: 37%; }
+    .w-22 { width: 22%; }
     .achievement-subtext {
       color: $gray-18;
       font-family: $font-stack-satoshi;
