@@ -87,20 +87,17 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-
       .tip-item {
         display: flex;
         align-items: center;
         gap: 12px;
         align-self: stretch;
-
         img {
           width: 116px;
           height: 114px;
           border-radius: 4px;
           object-fit: cover;
         }
-
         p {
           color: $black;
           font-family: $font-stack-neue-regrade;

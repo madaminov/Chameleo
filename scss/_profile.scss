@@ -1,82 +1,79 @@
 .profile {
-    width: 100%;
-    height: calc(100dvh - 92px);
-    overflow: hidden auto;
+  width: 100%;
+  height: calc(100dvh - 92px);
+  overflow: hidden auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 32px;
+  padding: 108px 20px 50px 20px;
+  z-index: 2;
+  box-sizing: border-box;
+  .profile-wrapper {
     display: flex;
-    position: relative;
     flex-direction: column;
-    gap: 32px;
-    padding: 108px 20px 50px 20px;
-    z-index: 2;
-    box-sizing: border-box;
-   .profile-wrapper {
-    display: flex;
-      flex-direction: column;
-      gap: 16px;
+    gap: 16px;
     .profile-header {
-        display: flex;
-justify-content: space-between;
-align-items: flex-end;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
     }
-  
+
     .profile-info {
       display: flex;
       flex-direction: column;
       gap: 16px;
-  
+
       .profile-name {
         display: flex;
         width: 199px;
-justify-content: space-between;
-align-items: flex-end;
+        justify-content: space-between;
+        align-items: flex-end;
         h1 {
-color: $black;
-font-family: $font-stack-satoshi;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: 36px; 
-margin-bottom: 0;
+          color: $black;
+          font-family: $font-stack-satoshi;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 36px;
+          margin-bottom: 0;
         }
-        .icon-pen{
-            width: 24px;
-height: 24px;
+        .icon-pen {
+          width: 24px;
+          height: 24px;
         }
       }
-  
+
       .profile-email {
         color: $black;
-font-family: $font-stack-neue-regrade;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-bottom: 0;
+        font-family: $font-stack-neue-regrade;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 0;
       }
     }
-  
+
     .profile-avatar {
-        width: 67.163px;
-        height: 78.157px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .avatar-background {
+      width: 67.163px;
+      height: 78.157px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        content: '';
         position: absolute;
         width: 67.163px;
         height: 78.157px;
-        background-image: url('../images/avatar-vector.svg');
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzUiIGhlaWdodD0iODQiIHZpZXdCb3g9IjAgMCA3NSA4NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC4xNjY2IDE2LjYyNDdDMTkuNjc1MSAxMC4yNTI3IDI0LjE0MjYgMC4wNTQwMTE4IDMyLjQ0NzQgMC4wODUyMjUxQzQxLjA0NTQgMC4xMTc1NCA0NC4zMTM5IDExLjMzNDggNTAuODMzNSAxNi43NjI1QzU1LjM4ODQgMjAuNTU0NiA2MS4wOTA2IDIyLjQyNjYgNjQuODE4NCAyNy4wMzQ4QzY5LjM5MTUgMzIuNjg4IDczLjk4NzkgMzguNjk2OSA3NC41MTIyIDQ2LjAzMzVDNzUuMTIwOCA1NC41NTA4IDczLjM1MjMgNjMuNjEzNiA2Ny45MTU1IDcwLjM3MzZDNjIuMTcxNyA3Ny41MTUyIDUzLjUzODEgODIuODUxNCA0NC40OTkgODMuMzUxMUMzNS44MjQgODMuODMwNyAyOS4wMzM1IDc3LjI2MjcgMjEuNjM3IDcyLjkzMkMxNC44MTIzIDY4LjkzNiA2LjgwNjk0IDY2LjEwNzEgMy4xMDM1NyA1OS4xMTM4Qy0wLjYzODc5NiA1Mi4wNDY4IC0wLjIzMDkxMiA0My4zOTM5IDEuODIxMjEgMzUuNTEyNUMzLjc1MjE2IDI4LjA5NjUgOS4xMTg5NyAyMi40NjM3IDE0LjE2NjYgMTYuNjI0N1oiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl83NDhfMTcyNjQpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfNzQ4XzE3MjY0IiB4MT0iOS4yNDU2NSIgeTE9IjE4LjgyMjciIHgyPSI2MS43OTc2IiB5Mj0iNzkuNjU5NiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjN0RGRkE2Ii8+CjxzdG9wIG9mZnNldD0iMC40OSIgc3RvcC1jb2xvcj0iI0JFQjVGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNCMzYzRkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        transform: rotate(357deg);
         z-index: 0;
       }
-      
-      .avatar-photo {
+      img {
         width: 62px;
         height: 62px;
         border-radius: 50%;
@@ -84,16 +81,16 @@ margin-bottom: 0;
         position: relative;
         z-index: 1;
       }
-      
-      
+    }
+
     p {
-        color: $black;
-font-family: $font-stack-neue-regrade;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin: 0;
+      color: $black;
+      font-family: $font-stack-neue-regrade;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0;
     }
 }
     .settings-inner {
