@@ -1,15 +1,15 @@
 .home {
-    width: 100%;
-    height: calc(100dvh - 92px);
-    overflow: hidden auto;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    gap: 32px;
-    padding: 37px 0px 20px 20px;
-    z-index: 2;
-    box-sizing: border-box;
-  .home-header{
+  width: 100%;
+  height: calc(100dvh - 92px);
+  overflow: hidden auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 32px;
+  padding: 37px 0px 110px 20px;
+  z-index: 2;
+  box-sizing: border-box;
+  .home-header {
     position: relative;
     flex-direction: column;
     display: flex;
@@ -20,7 +20,7 @@
       align-items: center;
       gap: 15px;
       padding-right: 20px;
-  
+
       .profile-avatar {
         width: 67.163px;
         height: 78.157px;
@@ -28,211 +28,48 @@
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-      
-      .avatar-background {
-        position: absolute;
-        width: 67.163px;
-        height: 78.157px;
-        background-image: url('../images/avatar-vector.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        transform: rotate(357deg);
-        z-index: 0;
-      }
-      
-      .avatar-photo {
-        width: 62px;
-        height: 62px;
-        border-radius: 50%;
-        object-fit: cover;
-        position: relative;
-        z-index: 1;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 67.163px;
+          height: 78.157px;
+          background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzUiIGhlaWdodD0iODQiIHZpZXdCb3g9IjAgMCA3NSA4NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC4xNjY2IDE2LjYyNDdDMTkuNjc1MSAxMC4yNTI3IDI0LjE0MjYgMC4wNTQwMTE4IDMyLjQ0NzQgMC4wODUyMjUxQzQxLjA0NTQgMC4xMTc1NCA0NC4zMTM5IDExLjMzNDggNTAuODMzNSAxNi43NjI1QzU1LjM4ODQgMjAuNTU0NiA2MS4wOTA2IDIyLjQyNjYgNjQuODE4NCAyNy4wMzQ4QzY5LjM5MTUgMzIuNjg4IDczLjk4NzkgMzguNjk2OSA3NC41MTIyIDQ2LjAzMzVDNzUuMTIwOCA1NC41NTA4IDczLjM1MjMgNjMuNjEzNiA2Ny45MTU1IDcwLjM3MzZDNjIuMTcxNyA3Ny41MTUyIDUzLjUzODEgODIuODUxNCA0NC40OTkgODMuMzUxMUMzNS44MjQgODMuODMwNyAyOS4wMzM1IDc3LjI2MjcgMjEuNjM3IDcyLjkzMkMxNC44MTIzIDY4LjkzNiA2LjgwNjk0IDY2LjEwNzEgMy4xMDM1NyA1OS4xMTM4Qy0wLjYzODc5NiA1Mi4wNDY4IC0wLjIzMDkxMiA0My4zOTM5IDEuODIxMjEgMzUuNTEyNUMzLjc1MjE2IDI4LjA5NjUgOS4xMTg5NyAyMi40NjM3IDE0LjE2NjYgMTYuNjI0N1oiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcl83NDhfMTcyNjQpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXJfNzQ4XzE3MjY0IiB4MT0iOS4yNDU2NSIgeTE9IjE4LjgyMjciIHgyPSI2MS43OTc2IiB5Mj0iNzkuNjU5NiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjN0RGRkE2Ii8+CjxzdG9wIG9mZnNldD0iMC40OSIgc3RvcC1jb2xvcj0iI0JFQjVGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNCMzYzRkYiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          z-index: 0;
+        }
+        img {
+          width: 62px;
+          height: 62px;
+          border-radius: 50%;
+          object-fit: cover;
+          position: relative;
+          z-index: 1;
+        }
       }
       .greeting-text {
         .greeting {
-            color: $black;
-            font-family: $font-stack-satoshi;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 24px; 
+          color: $black;
+          font-family: $font-stack-satoshi;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px;
         }
-  
+
         .name {
-            color: $black;
-            font-family: $font-stack-neue-regrade;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
+          color: $black;
+          font-family: $font-stack-neue-regrade;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
         }
       }
-    }
-  
-    .daily-highlights {
-        padding-right: 20px;
-        position: relative;
-        z-index: 1;
-        gap: 14px;
-      .label {
-        position: absolute;
-        display: flex;
-        width: 120px;
-        height: 35px;
-        padding: 8px 20px;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-left: 24px;
-top: -17px;
-border-radius: 4px;
-border: 1px solid #D4F1F6;
-background: #F2FDFF;
-color: #006479;
-font-family: $font-stack-satoshi;
-font-size: 12px;
-font-style: normal;
-font-weight: 700;
-line-height: 15.449px; 
-letter-spacing: -0.12px;
-white-space: nowrap;
-        z-index: 1;
-      }
-  
-      .daily-card {
-        display: flex;
-padding: 32px 24px 24px 24px;
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
-align-self: stretch;
-border-radius: 24px;
-border: 1px solid $gray-4;
-background: $white;
-        .title {
-            color: $black;
-            font-family: $font-stack-neue-regrade;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-        .text {
-            overflow: hidden;
-            color: $black;
-            text-overflow: ellipsis;
-            font-family: $font-stack-satoshi;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-        }
-      }
-    }
-}
-.learn-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    align-self: stretch;
-    padding-right: 20px;
-
-    .title {
-      color: $black;
-      font-family: $font-stack-neue-regrade;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      margin-bottom: 0px;
-    }
-    .learn-card {
-      display: flex;
-      height: 90px;
-      padding: 18px 16px 18px 24px;
-      justify-content: flex-end;
-      align-items: flex-start;
-      gap: 31px;
-      align-self: stretch;
-      border-radius: 30px;
-      border: 1px solid $gray-4;
-      background: $white;
-    }
-
-    .learn-content {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .learn-percentage {
-      display: flex;
-      align-items: baseline;
-      gap: 7px;
-
-      .percent {
-        color: $black;
-        font-family: $font-stack-satoshi;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
-
-      .label {
-        color: $black;
-        font-family: $font-stack-satoshi;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 15.83px; /* 131.915% */
-      }
-    }
-
-    .flag-wrap {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-
-      .vs-text {
-        color: $black;
-        text-align: center;
-        font-family: $font-stack-satoshi;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
-
-      .flag-circle {
-        display: flex;
-        width: 54px;
-        height: 54px;
-        padding: 11px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 36px;
-        border: 1px solid $gray-15;
-        background: $gray-16;
-        .flag-img {
-          width: 32px;
-          height: 32px;
-          object-fit: cover;
-          border-radius: 50%;
-        }
-      }
-    }
-
-    .btn-primary {
-      width: 100%;
     }
   }
-  
+
   .section-bottom {
     display: flex;
     flex-direction: column;
@@ -275,138 +112,157 @@ background: $white;
       }
     }
   }
-  .ai-container{
+  .ai-container {
     display: flex;
     flex-direction: column;
     padding-right: 20px;
     .ai-assistant {
+      display: flex;
+      padding: 24px;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-radius: 24px;
+      border: 1px solid $gray-4;
+      background: $white;
+      .ai-text {
         display: flex;
-        padding: 24px;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: flex-start;
-        border-radius: 24px;
-border: 1px solid $gray-4;
-background: $white;
-  .ai-text{
-    display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
-      .title {
-        color: $black;
-font-family: $font-stack-neue-regrade;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+        gap: 10px;
+        .title {
+          color: $black;
+          font-family: $font-stack-neue-regrade;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+
+        .text {
+          overflow: hidden;
+          color: $black;
+          text-overflow: ellipsis;
+          font-family: $font-stack-satoshi;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
       }
-  
-      .text {
-        overflow: hidden;
-color: $black;
-text-overflow: ellipsis;
-font-family: $font-stack-satoshi;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-      }
-    }
       .icon-ai {
         width: 81px;
         height: 81px;
         flex-shrink: 0;
       }
     }
-}
-    .section-top {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        .wrap-section-header {
-          display: flex;
-          padding-right: 20px;
-          justify-content: space-between;
-          align-items: center;
-          .title {
-            color: $black;
-            font-family: $font-stack-neue-regrade;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            margin-bottom: 0px;
-          }
-          .link-see-more {
-            color: $blue-1;
-            text-align: center;
-            font-family: $font-stack-popins;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            letter-spacing: -0.3px;
-          }
-        }
-        .podcast-list {
-          display: flex;
-          gap: 12px;
-          overflow-x: auto;
-          .podcast-card {
-            width: 100%;
-            flex: 1;
-            height: 150px;
-            border-radius: 20px;
-            display: flex;
-            align-items: flex-end;
-            text-align: center;
-            padding: 16px 22px 16px 18px;
-            &.blue {
-              background-color: $blue-10;
-              background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTA1IiBoZWlnaHQ9IjkzIiB2aWV3Qm94PSIwIDAgMTA1IDkzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTg4LjIzMDUgLTg3LjQ2NjJDMTA3LjQyNSAtODguOTA0IDEzMS4xMiAtOTguNDQ2NSAxNDQuNDg3IC04NC41NjcxQzE1OC4zMjcgLTcwLjE5NzcgMTQ1LjQ4NCAtNDYuMDc5IDE0Ny4yNDggLTI2LjE4NjdDMTQ4LjQ4MSAtMTIuMjg5MiAxNTQuNjY5IDAuMzIxNzg1IDE1My4yNDcgMTQuMjAxMUMxNTEuNTAyIDMxLjIyNzggMTQ5LjIxOSA0OC44ODU1IDEzOC4yMTMgNjEuOTczOUMxMjUuNDM2IDc3LjE2ODUgMTA3LjkzNiA4OS4zMTM0IDg4LjIzMDUgOTEuNTE2NUM2Ny40MTIzIDkzLjg0MzkgNDQuODQyMSA4OC4zNTM3IDI5LjQzMDggNzQuMTM1N0MxNC42NDAzIDYwLjQ5MDQgMTQuMjgxIDM4LjI0ODcgOS4zMjc3MyAxOC43MjI5QzQuNzU3NDEgMC43MDY1NTggLTMuNjA1NzYgLTE3LjMzMjQgMS43MDk2MSAtMzUuMTQyM0M3LjA4MDk2IC01My4xMzk3IDIxLjcxOTkgLTY2Ljg2NzYgMzcuNzY4OSAtNzYuNTczM0M1Mi44NzAzIC04NS43MDU5IDcwLjY0MTYgLTg2LjE0ODcgODguMjMwNSAtODcuNDY2MloiIGZpbGw9IiMxODJBODgiLz4KPC9zdmc+Cg==');
-              background-repeat: no-repeat;
-              background-position: 100% 0px;
-            }
-    
-            &.purple {
-              background-color: $violet-1;
-              background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDUiIGhlaWdodD0iOTMiIHZpZXdCb3g9IjAgMCAxMDUgOTMiIGZpbGw9Im5vbmUiPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTg4LjIzMDUgLTg3LjQ2NjJDMTA3LjQyNSAtODguOTA0IDEzMS4xMiAtOTguNDQ2NSAxNDQuNDg3IC04NC41NjcxQzE1OC4zMjcgLTcwLjE5NzcgMTQ1LjQ4NCAtNDYuMDc5IDE0Ny4yNDggLTI2LjE4NjdDMTQ4LjQ4MSAtMTIuMjg5MiAxNTQuNjY5IDAuMzIxNzg1IDE1My4yNDcgMTQuMjAxMUMxNTEuNTAyIDMxLjIyNzggMTQ5LjIxOSA0OC44ODU1IDEzOC4yMTMgNjEuOTczOUMxMjUuNDM2IDc3LjE2ODUgMTA3LjkzNiA4OS4zMTM0IDg4LjIzMDUgOTEuNTE2NUM2Ny40MTIzIDkzLjg0MzkgNDQuODQyMSA4OC4zNTM3IDI5LjQzMDggNzQuMTM1N0MxNC42NDAzIDYwLjQ5MDQgMTQuMjgxIDM4LjI0ODcgOS4zMjc3MyAxOC43MjI5QzQuNzU3NDEgMC43MDY1NTggLTMuNjA1NzYgLTE3LjMzMjQgMS43MDk2MSAtMzUuMTQyM0M3LjA4MDk2IC01My4xMzk3IDIxLjcxOTkgLTY2Ljg2NzYgMzcuNzY4OSAtNzYuNTczM0M1Mi44NzAzIC04NS43MDU5IDcwLjY0MTYgLTg2LjE0ODcgODguMjMwNSAtODcuNDY2MloiIGZpbGw9IiNCQzk5RkYiLz4KPC9zdmc+');
-              background-repeat: no-repeat;
-              background-position: 100% 0px;
-            }
-            .podcast-text {
-              color: $white;
-              white-space: nowrap;
-              text-align: center;
-              font-family: $font-stack-popins;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: normal;
-              letter-spacing: -0.3px;
-            }
-            .podcast-text-black {
-              color: $black;
-              white-space: nowrap;
-              text-align: center;
-              font-family: $font-stack-popins;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: normal;
-              letter-spacing: -0.3px;
-            }
-          }
-        }
-      }
-  
-    .consultation-button {
-      margin-top: auto;
+  }
+  .section-top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .wrap-section-header {
+      display: flex;
       padding-right: 20px;
-  
-      .btn-primary {
-        width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        color: $black;
+        font-family: $font-stack-neue-regrade;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 0px;
+      }
+      .link-see-more {
+        color: $blue-1;
+        text-align: center;
+        font-family: $font-stack-popins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: -0.3px;
       }
     }
+    .podcast-list {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+    }
   }
-  
+  .consultation-button {
+    padding-right: 20px;
+    position: fixed;
+    z-index: 1;
+    bottom: calc(92px + 20px);
+    max-width: calc(768px - 20px);
+    width: 100%;
+    margin: 0 auto;
+    left: 10px;
+    right: 10px;
+  }
+  .appointment-wrap {
+    padding-right: 20px;
+  }
+}
+.daily-highlights {
+  padding-right: 20px;
+  position: relative;
+  z-index: 1;
+  gap: 14px;
+  .label {
+    position: absolute;
+    display: flex;
+    min-width: 120px;
+    height: 35px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    left: 24px;
+    top: -17px;
+    border-radius: 4px;
+    border: 1px solid $blue-13;
+    background: $blue-14;
+    color: $blue-15;
+    font-family: $font-stack-satoshi;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15.449px;
+    letter-spacing: -0.12px;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  .daily-card {
+    display: flex;
+    padding: 32px 24px 24px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 24px;
+    border: 1px solid $gray-4;
+    background: $white;
+    .title {
+      color: $black;
+      font-family: $font-stack-neue-regrade;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .text {
+      overflow: hidden;
+      color: $black;
+      text-overflow: ellipsis;
+      font-family: $font-stack-satoshi;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

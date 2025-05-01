@@ -54,6 +54,14 @@
     &.wrap-button-type-2 {
       gap: 32px;
     }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      align-self: stretch;
+    }
   }
   .text-help {
     width: 100%;

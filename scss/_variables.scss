@@ -25,8 +25,12 @@ $blue-7: #5649e7 !default;
 $blue-8: #7e61ff !default;
 $blue-9: #887df1 !default;
 $blue-10: #8f98ff !default;
-$blue-11: #EFFCFF !default;
+$blue-11: #effcff !default;
 $blue-12: #007188 !default;
+$blue-13: #d4f1f6 !default;
+$blue-14: #f2fdff !default;
+$blue-15: #006479 !default;
+$blue-16: #9d96da !default;
 
 $gray-1: #b1afc4 !default;
 $gray-2: #e6e3ff !default;
@@ -46,14 +50,14 @@ $gray-15: #bcc1cd !default;
 $gray-16: #d9d9d966 !default;
 $gray-17: #e6e6e6 !default;
 $gray-18: #808080 !default;
-$gray-19: #AFB1B6 !default;
+$gray-19: #afb1b6 !default;
 
 $violet-1: #dbbbfd !default;
-$violet-2: #7E237F !default;
+$violet-2: #7e237f !default;
 
 $red: #db4446 !default;
 
-$green-1: #BBFFD4 !default;
+$green-1: #bbffd4 !default;
 
 @mixin transition($transition) {
   -moz-transition: all $transition ease;
