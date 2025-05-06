@@ -12802,6 +12802,16 @@ select:-webkit-autofill:focus {
 .btn-message:hover svg, .btn-message.active svg {
   fill: #493bc5;
 }
+.btn-message:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.btn-message:disabled span {
+  color: #a1a1a1;
+}
+.btn-message:disabled svg {
+  fill: #a1a1a1;
+}
 
 .btn-profile {
   display: flex;

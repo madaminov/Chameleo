@@ -247,6 +247,16 @@
       fill: $blue-3;
     }
   }
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    span {
+      color: $gray-10;
+    }
+    svg {
+      fill: $gray-10;
+    }
+  }
 }
 .btn-profile {
   display: flex;
