@@ -5,23 +5,31 @@
   gap: 20px;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px 0px 20px 20px;
+  padding: 52px 0px 20px 0px;
   position: relative;
   z-index: 2;
   overflow-y: auto;
   .top-header {
     position: relative;
     z-index: 3;
+    margin-left: 31px;
+  }
+  .footer-button {
+    width: 100%;
+    padding: 0px 20px;
+    position: absolute;
+    z-index: 3;
+    bottom: 31px;
   }
   .roadmap {
     position: absolute;
     width: 100%;
     height: calc(100dvh - 92px);
+    padding: 0px 9px;
     z-index: 1;
     left: 0;
     top: 0;
     overflow: auto;
-
     &::before {
       content: '';
       width: 100%;
