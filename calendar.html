@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Chameleo-App</title>
+  <meta name="description" content="Chameleo-App" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper-main">
+    <div class="wrapper wrapper-gradient-two">
+      <div class="consultation-wrap">
+        <div class="top-header">
+          <button class="btn-back">
+            <svg>
+              <use href="images/icon-back.svg#icon"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="section-inner scrollbar-hidden">
+          <div class="title">Booking Consultation</div>
+          <div class="wrap-calendar">
+            <div class="title-calendar">Select Date</div>
+            <div id="calendar"></div>
+          </div>
+          <div class="wrap-select-time">
+            <div class="title-select-time">Select Time</div>
+            <div class="select-time">
+              <!--checkbox-->
+              <div class="form-checkbox">
+                <input type="checkbox" id="select-time-1" value="09:45" class="btn-check" disabled>
+                <label class="btn-label" for="select-time-1">09:45</label>
+              </div>
+              <!--checkbox end-->
+              <!--checkbox-->
+              <div class="form-checkbox">
+                <input type="checkbox" id="select-time-2" value="10:00" class="btn-check" checked>
+                <label class="btn-label" for="select-time-2">10:00</label>
+              </div>
+              <!--checkbox end-->
+              <!--checkbox-->
+              <div class="form-checkbox">
+                <input type="checkbox" id="select-time-3" value="10:15" class="btn-check">
+                <label class="btn-label" for="select-time-3">10:15</label>
+              </div>
+              <!--checkbox end-->
+              <!--checkbox-->
+              <div class="form-checkbox">
+                <input type="checkbox" id="select-time-4" value="10:30" class="btn-check">
+                <label class="btn-label" for="select-time-4">10:30</label>
+              </div>
+              <!--checkbox end-->
+              <!--checkbox-->
+              <div class="form-checkbox">
+                <input type="checkbox" id="select-time-5" value="10:45" class="btn-check" disabled>
+                <label class="btn-label" for="select-time-5">10:45</label>
+              </div>
+              <!--checkbox end-->
+              <!--checkbox-->
+              <div class="form-checkbox">
+                <input type="checkbox" id="select-time-6" value="11:00" class="btn-check">
+                <label class="btn-label" for="select-time-6">11:00</label>
+              </div>
+              <!--checkbox end-->
+              <!--checkbox-->
+              <div class="form-checkbox">
+                <input type="checkbox" id="select-time-7" value="11:15" class="btn-check">
+                <label class="btn-label" for="select-time-7">11:15</label>
+              </div>
+              <!--checkbox end-->
+              <!--checkbox-->
+              <div class="form-checkbox">
+                <input type="checkbox" id="select-time-8" value="11:30" class="btn-check">
+                <label class="btn-label" for="select-time-8">11:30</label>
+              </div>
+              <!--checkbox end-->
+              <!--checkbox-->
+              <div class="form-checkbox">
+                <input type="checkbox" id="select-time-9" value="11:45" class="btn-check">
+                <label class="btn-label" for="select-time-9">11:45</label>
+              </div>
+              <!--checkbox end-->
+            </div>
+          </div>
+
+        </div>
+        <div class="wrap-continue">
+          <button class="btn btn-primary">Continue</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</body>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/calendar/utils/index.js"></script>
+<script src="js/calendar/index.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Destructuring the Calendar constructor and its utilities.
+    const { Calendar } = window.VanillaCalendarPro;
+    const { getDateString } = window.VanillaCalendarProUtils;
+
+    // Instantiate the calendar and initialize it.
+    const calendar = new Calendar('#calendar');
+    calendar.init();
+
+    // Create logs for demonstration.
+    console.log('A copy of the calendar:', calendar);
+    console.log('Date string conversion utility:', getDateString(new Date()));
+  });
+</script>
+
+</html>

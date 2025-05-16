@@ -1,9 +1,10 @@
 //sass --watch scss/style.scss css/style.css
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/variables';
+@import '_variables';
 @import '_fonts';
 @import '_animate';
-@import '_variables';
+@import '_calendar';
 @import '_reset';
 @import '_toast';
 @import '_modal';
@@ -45,3 +46,4 @@
 @import '_appointment';
 @import '_homepage';
 @import '_gamification';
+@import '_consultation';

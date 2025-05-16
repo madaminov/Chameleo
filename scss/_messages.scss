@@ -312,6 +312,31 @@
     overflow-y: auto;
     padding: 20px 0px;
   }
+  .wrap-welcom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    .title {
+      color: $black;
+      text-align: center;
+      font-family: $font-stack-neue-regrade;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .description {
+      color: $gray-6;
+      text-align: center;
+      font-family: $font-stack-satoshi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
   .messages-users {
     display: flex;
     gap: 6px;
@@ -333,7 +358,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 22px; /* 129.412% */
-        width: calc(100% - 79px);
+        max-width: calc(100% - 60px);
         min-height: 20px;
         flex-shrink: 0;
         background-color: $blue-1;
@@ -378,7 +403,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: 22px; /* 129.412% */
-        width: calc(100% - 79px);
+        max-width: calc(100% - 60px);
         min-height: 20px;
         flex-shrink: 0;
         background-color: $gray-20;
@@ -409,6 +434,21 @@
           object-fit: cover;
         }
       }
+    }
+    .text {
+      ul {
+        margin-top: 20px;
+        padding-left: 20px;
+      }
+      ol {
+        margin-top: 20px;
+        padding-left: 20px;
+      }
+    }
+    .btn-generating {
+      margin-top: 18px;
+      margin-bottom: 18px;
+      max-width: 213px;
     }
   }
 }
