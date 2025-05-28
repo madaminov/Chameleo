@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Chameleo-App</title>
+	<meta name="description" content="Chameleo-App" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper-main">
+		<div class="wrapper wrapper-gradient-two">
+
+		</div>
+	</div>
+	<div class="modal fade aiModal" id="aiModal" aria-hidden="true" aria-labelledby="aiModalabel" tabindex="-1">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title" id="aiModalabel">AI magic</div>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal-text">Our experts crafted a method for 20 countries. For your chosen country. AI
+						takes the wheel—so expect smart guesses, but maybe a few creative surprises too!</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary w-100">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+	<script>
+		let aiModal = new bootstrap.Modal(document.getElementById("aiModal"), {});
+		document.onreadystatechange = function () {
+			aiModal.show();
+		};
+	</script>
+
+
+</body>
+
+</html>
