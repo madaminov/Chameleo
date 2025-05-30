@@ -25,6 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
     .card-title {
       font-size: 16px;
       font-weight: 700;
@@ -99,6 +100,9 @@
         background: $gray-2;
         border: 3px solid $blue-7;
         border-radius: 50%;
+      }
+      &:disabled {
+        pointer-events: none;
       }
     }
 

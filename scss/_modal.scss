@@ -1,5 +1,6 @@
 .modal-backdrop {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 .modal-header {
   position: relative;
@@ -137,5 +138,97 @@
     line-height: 20px; /* 142.857% */
     letter-spacing: 0.1px;
     margin-bottom: 0;
+  }
+}
+.modalfull {
+  .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 16px 16px 20px 16px;
+    z-index: 2;
+  }
+  .modal-dialog {
+    max-width: 768px;
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    margin-top: 0;
+    pointer-events: none;
+    height: 100%;
+    padding-bottom: 92px;
+    background-color: $white;
+  }
+  .modal-content {
+    height: 100%;
+    border-radius: 0;
+    border: none;
+    &::before {
+      content: '';
+      width: 227.968px;
+      height: 265.127px;
+      transform: rotate(9.418deg);
+      flex-shrink: 0;
+      background-color: rgba(29, 180, 214, 0.5);
+      filter: blur(75px);
+      position: fixed;
+      left: 60%;
+      top: -12%;
+      right: auto;
+      z-index: 1;
+      @include media-breakpoint-up(sm) {
+        width: calc(227.968px * 1.2);
+        height: calc(265.127px * 1.2);
+        left: 65%;
+        top: -15%;
+      }
+      @include media-breakpoint-up(md) {
+        width: calc(227.968px * 1.5);
+        height: calc(265.127px * 1.5);
+        left: 75%;
+        top: -25%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: calc(227.968px * 1.8);
+        height: calc(265.127px * 1.8);
+        left: 75%;
+        top: -25%;
+      }
+    }
+    &::after {
+      content: '';
+      width: 306.419px;
+      height: 379.452px;
+      transform: rotate(163.31deg);
+      flex-shrink: 0;
+      background-color: rgba(115, 102, 231, 0.3);
+      filter: blur(75px);
+      position: fixed;
+      left: -5%;
+      top: 90%;
+      z-index: 1;
+      bottom: 50%;
+      margin: auto;
+      @include media-breakpoint-up(sm) {
+        width: calc(306.419px * 1.2);
+        height: calc(379.452px * 1.2);
+        left: -5%;
+        top: 90%;
+        bottom: 50%;
+      }
+      @include media-breakpoint-up(md) {
+        width: calc(306.419px * 1.5);
+        height: calc(379.452px * 1.5);
+        left: -10%;
+        top: 90%;
+        bottom: 50%;
+      }
+      @include media-breakpoint-up(lg) {
+        width: calc(306.419px * 1.8);
+        height: calc(379.452px * 1.8);
+        left: -10%;
+        top: 90%;
+        bottom: 50%;
+      }
+    }
   }
 }

@@ -44,6 +44,7 @@
       overflow-x: auto;
     }
   }
+
   .achievements-section {
     display: flex;
     flex-direction: column;
@@ -184,7 +185,7 @@
   gap: 16px;
   align-self: stretch;
   padding-right: 20px;
-
+  padding-bottom: 80px;
   .title {
     color: $black;
     font-family: $font-stack-neue-regrade;
@@ -205,6 +206,7 @@
     border-radius: 30px;
     border: 1px solid $gray-4;
     background: $white;
+    cursor: pointer;
   }
 
   .learn-content {

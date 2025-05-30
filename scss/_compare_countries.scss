@@ -83,7 +83,8 @@
       display: flex;
       flex-direction: column;
       gap: 32px;
-
+      overflow: auto;
+      padding-bottom: 100px;
       .countries-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
