@@ -1,6 +1,6 @@
 .gamification {
   width: 100%;
-  height: calc(100dvh - 92px);
+  height: calc(100dvh - 64px);
   display: flex;
   gap: 20px;
   flex-direction: column;
@@ -24,7 +24,7 @@
   .roadmap {
     position: absolute;
     width: 100%;
-    height: calc(100dvh - 92px);
+    height: calc(100dvh - 64px);
     padding: 0px 9px;
     z-index: 1;
     left: 0;

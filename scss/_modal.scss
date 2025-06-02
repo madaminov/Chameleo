@@ -141,11 +141,16 @@
   }
 }
 .modalfull {
+  background-color: $white;
   .modal-body {
     position: relative;
     flex: 1 1 auto;
-    padding: 16px 16px 20px 16px;
+    padding: 30px 20px 20px 20px;
     z-index: 2;
+  }
+  .modal-header {
+    border: none;
+    padding: 40px 20px 0px 20px;
   }
   .modal-dialog {
     max-width: 768px;
@@ -155,13 +160,13 @@
     margin-top: 0;
     pointer-events: none;
     height: 100%;
-    padding-bottom: 92px;
     background-color: $white;
   }
   .modal-content {
     height: 100%;
     border-radius: 0;
     border: none;
+    padding-bottom: 64px;
     &::before {
       content: '';
       width: 227.968px;
@@ -170,7 +175,7 @@
       flex-shrink: 0;
       background-color: rgba(29, 180, 214, 0.5);
       filter: blur(75px);
-      position: fixed;
+      position: absolute;
       left: 60%;
       top: -12%;
       right: auto;
@@ -202,7 +207,7 @@
       flex-shrink: 0;
       background-color: rgba(115, 102, 231, 0.3);
       filter: blur(75px);
-      position: fixed;
+      position: absolute;
       left: -5%;
       top: 90%;
       z-index: 1;

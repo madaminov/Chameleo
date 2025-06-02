@@ -79,7 +79,7 @@
   }
 }
 .start-view-2 {
-  height: 100%;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -110,6 +110,8 @@
       align-items: flex-start;
       gap: 24px;
       align-self: stretch;
+      margin-top: auto;
+      margin-bottom: auto;
     }
     h1 {
       color: $black;
@@ -173,7 +175,6 @@
     align-items: center;
     gap: 21px;
     align-self: stretch;
-    width: 100%;
-    margin-top: auto;
+    width: 100%;    
   }
 }

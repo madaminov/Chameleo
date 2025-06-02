@@ -5,7 +5,7 @@
   height: 100%;
   .header-carousel {
     display: inline-flex;
-    padding: 28px 0px 20px 0px;
+    padding: 0px 0px 20px 0px;
     align-items: center;
     gap: 16px;
     width: 100%;
@@ -122,10 +122,10 @@
     .description {
       color: $black;
       font-family: $font-stack-satoshi;
-      font-size: 16px;
+      font-size: 17px;
       font-style: normal;
       font-weight: 400;
-      line-height: 20px; /* 125% */
+      line-height: 22px;
     }
   }
 }
@@ -161,10 +161,10 @@
     .description {
       color: $black;
       font-family: $font-stack-satoshi;
-      font-size: 16px;
+      font-size: 17px;
       font-style: normal;
       font-weight: 400;
-      line-height: 20px; /* 125% */
+      line-height: 22px; /* 125% */
       margin-bottom: 0px;
       align-self: stretch;
     }
@@ -216,8 +216,8 @@
 
     .example-text {
       color: $black;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 17px;
+      line-height: 22px;
       font-family: $font-stack-satoshi;
       font-weight: 400;
       margin-bottom: 0px;
@@ -269,8 +269,8 @@
     }
     .example-text {
       color: $black;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 17px;
+      line-height: 22px;
       font-family: $font-stack-satoshi;
       font-weight: 400;
       margin-bottom: 0px;

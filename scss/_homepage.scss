@@ -1,6 +1,6 @@
 .home {
   width: 100%;
-  height: calc(100dvh - 92px);
+  height: calc(100dvh - 64px);
   overflow: hidden auto;
   display: flex;
   position: relative;
@@ -195,7 +195,7 @@
     padding-right: 20px;
     position: fixed;
     z-index: 1;
-    bottom: calc(92px + 20px);
+    bottom: calc(64px + 20px);
     max-width: calc(768px - 20px);
     width: 100%;
     margin: 0 auto;

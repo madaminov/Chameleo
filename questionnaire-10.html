@@ -211,12 +211,17 @@
 
     const update = () => {
       const min = parseInt(slider.min);
+      console.log('slider.min' + slider.min);
       const max = parseInt(slider.max);
+      console.log('slider.max' + slider.max);
       const val = parseInt(slider.value);
+      console.log('slider.value' + slider.value);
       const percent = (val - min) / (max - min);
+      console.log('percent' + percent);
 
       const sliderWidth = slider.offsetWidth;
       const labelWidth = label.offsetWidth;
+      console.log('labelWidth' + labelWidth);
 
       const offset = percent * (sliderWidth - 16) - labelWidth / 2 + 8;
       label.style.left = `${offset}px`;

@@ -1,6 +1,6 @@
 .questionnaire_comparison {
   width: 100%;
-  height: calc(100dvh - 92px);
+  height: calc(100dvh - 64px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8,6 +8,20 @@
   position: relative;
   z-index: 2;
   overflow: hidden;
+  .top-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    h1 {
+      color: $black;
+      font-family: $font-stack-neue-regrade;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0;
+    }
+  }
   .section-inner {
     padding-top: 20px;
     display: flex;
@@ -36,5 +50,10 @@
   .wrap-comparison-card {
     overflow: auto;
     padding-bottom: 20px;
+  }
+  .learn-wrap {
+    gap: 16px;
+    padding-right: 0;
+    padding-bottom: 0;
   }
 }
