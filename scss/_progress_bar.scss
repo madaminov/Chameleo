@@ -3,6 +3,21 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  .wrap-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+  .progress-text {
+    color: $black;
+    font-family: $font-stack-satoshi;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.1px;
+  }
   .progress-label {
     color: $black;
     font-family: $font-stack-satoshi;

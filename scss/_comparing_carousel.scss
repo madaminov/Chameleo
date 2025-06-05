@@ -132,7 +132,7 @@
 .wrap-content-county {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
   padding: 34px 4px 0px 4px;
   flex-grow: 1;
   height: 100%;
@@ -167,11 +167,16 @@
       line-height: 22px; /* 125% */
       margin-bottom: 0px;
       align-self: stretch;
+      p,
+      ol,
+      ul {
+        margin-bottom: 20px;
+      }
     }
   }
   .flag-box {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     .flag-icon {
       width: 47px;
@@ -274,6 +279,30 @@
       font-family: $font-stack-satoshi;
       font-weight: 400;
       margin-bottom: 0px;
+      p,
+      ol,
+      ul {
+        margin-bottom: 20px;
+      }
+    }
+    .flag-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      .flag-icon,
+      img {
+        width: 47px;
+        height: 32px;
+        object-fit: contain;
+      }
+      .country-name {
+        font-family: $font-stack-neue-regrade;
+        font-size: 30px;
+        font-weight: 700;
+        color: $black;
+        line-height: 38px;
+        margin: 0;
+      }
     }
   }
   .wrap-button {

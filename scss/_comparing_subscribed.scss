@@ -207,6 +207,12 @@
     border: 1px solid $gray-4;
     background: $white;
     cursor: pointer;
+    position: relative;
+    .btn-trash {
+      position: absolute;
+      right: 12px;
+      top: -6px;
+    }
   }
 
   .learn-content {
@@ -229,6 +235,9 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+      @media (max-width: 380px) {
+        font-size: 32px;
+      }
     }
 
     .label {
@@ -271,6 +280,14 @@
         height: 32px;
         object-fit: cover;
         border-radius: 50%;
+      }
+      @media (max-width: 380px) {
+        width: 46px;
+        height: 46px;
+        .flag-img {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }

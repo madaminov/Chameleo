@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 40px 20px 20px 20px;
+  padding: 40px 20px 0px 20px;
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -20,6 +20,45 @@
       font-weight: 700;
       line-height: normal;
       margin: 0;
+    }
+    .flag-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .vs-text {
+        color: $black;
+        text-align: center;
+        font-family: $font-stack-satoshi;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+    .flag-circle {
+      display: flex;
+      width: 38px;
+      height: 38px;
+      padding: 11px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 36px;
+      border: 1px solid $gray-9;
+      background: $white;
+      .flag-img {
+        width: 16px;
+        height: 16px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      @media (max-width: 380px) {
+        width: 30px;
+        height: 30px;
+        .flag-img {
+          width: 12px;
+          height: 12px;
+        }
+      }
     }
   }
   .section-inner {
