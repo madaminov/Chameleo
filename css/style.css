@@ -19022,6 +19022,12 @@ select:-webkit-autofill:focus {
   border-radius: 30px;
   border: 1px solid #cecece;
   background: #fff;
+  position: relative;
+}
+.start-view-2 .wrap-card .card .wraper-image {
+  position: absolute;
+  right: 24px;
+  width: 105px;
 }
 .start-view-2 .wrap-card .card .wrap-icon {
   display: flex;
@@ -21114,7 +21120,7 @@ footer .wrap-send-message {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 24px;
   align-self: stretch;
   padding-right: 20px;
   padding-bottom: 80px;
@@ -21130,7 +21136,7 @@ footer .wrap-send-message {
 }
 .learn-wrap .learn-card {
   display: flex;
-  height: 90px;
+  min-height: 90px;
   padding: 18px 16px 18px 24px;
   justify-content: flex-end;
   align-items: flex-start;
@@ -21153,11 +21159,43 @@ footer .wrap-send-message {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  position: relative;
+}
+.learn-wrap .info-highlights {
+  position: absolute;
+  display: flex;
+  min-width: 120px;
+  height: 35px;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  left: 0px;
+  top: -36px;
+  border-radius: 4px;
+  border: 1px solid #d4f1f6;
+  background: #f2fdff;
+  color: #006479;
+  font-family: "Satoshi", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15.449px;
+  letter-spacing: -0.12px;
+  white-space: nowrap;
+  z-index: 1;
+}
+@media (max-width: 380px) {
+  .learn-wrap .info-highlights {
+    height: 30px;
+    padding: 6px 10px;
+  }
 }
 .learn-wrap .learn-percentage {
   display: flex;
   align-items: baseline;
-  gap: 7px;
+  gap: 0px 7px;
+  flex-wrap: wrap;
 }
 .learn-wrap .learn-percentage .percent {
   color: #141414;
@@ -21179,6 +21217,11 @@ footer .wrap-send-message {
   font-style: normal;
   font-weight: 500;
   line-height: 15.83px; /* 131.915% */
+}
+@media (max-width: 380px) {
+  .learn-wrap .learn-percentage .label {
+    width: 100%;
+  }
 }
 .learn-wrap .flag-wrap {
   display: flex;
@@ -22941,6 +22984,21 @@ footer .wrap-send-message {
   font-weight: 700;
   line-height: normal;
 }
+.home .home-header .home-top .greeting-text .type-account {
+  color: #141414;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.home .home-header .home-top .greeting-text .type-account a {
+  color: #6f60f4;
+}
+.home .home-header .home-top .greeting-text .type-account a:hover {
+  color: #6f60f4;
+  text-decoration: underline;
+}
 .home .section-bottom {
   display: flex;
   flex-direction: column;
@@ -23103,6 +23161,12 @@ footer .wrap-send-message {
   letter-spacing: -0.12px;
   white-space: nowrap;
   z-index: 1;
+}
+@media (max-width: 380px) {
+  .daily-highlights .label {
+    height: 30px;
+    padding: 6px 10px;
+  }
 }
 .daily-highlights .daily-card {
   display: flex;

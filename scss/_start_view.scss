@@ -141,6 +141,12 @@
       @include border-radius(30px);
       border: 1px solid $gray-4;
       background: $white;
+      position: relative;
+      .wraper-image {
+        position: absolute;
+        right: 24px;
+        width: 105px;
+      }
       .wrap-icon {
         display: flex;
         width: 43px;
@@ -175,6 +181,6 @@
     align-items: center;
     gap: 21px;
     align-self: stretch;
-    width: 100%;    
+    width: 100%;
   }
 }

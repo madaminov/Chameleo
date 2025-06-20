@@ -66,6 +66,21 @@
           font-weight: 700;
           line-height: normal;
         }
+        .type-account {
+          color: $black;
+          font-family: $font-stack-satoshi;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          a {
+            color: $blue-1;
+            &:hover {
+              color: $blue-1;
+              text-decoration: underline;
+            }
+          }
+        }
       }
     }
   }
@@ -234,6 +249,10 @@
     letter-spacing: -0.12px;
     white-space: nowrap;
     z-index: 1;
+    @media (max-width: 380px) {
+      height: 30px;
+      padding: 6px 10px;
+    }
   }
 
   .daily-card {
