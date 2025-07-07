@@ -19913,7 +19913,7 @@ select:-webkit-autofill:focus {
   display: flex;
   gap: 16px;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 .subscription-apple-pay .subscription-options .subscription-options-row .col {
   width: calc(50% - 16px);
@@ -19922,6 +19922,7 @@ select:-webkit-autofill:focus {
   display: block;
   cursor: pointer;
   width: 100%;
+  height: 100%;
 }
 .subscription-apple-pay .subscription-options .subscription-radio {
   display: none;
@@ -19930,7 +19931,8 @@ select:-webkit-autofill:focus {
   border-radius: 16px;
   border: 1px solid #454b60;
   transition: all 0.3s ease;
-  height: 146px;
+  min-height: 146px;
+  height: 100%;
   background-color: transparent !important;
 }
 .subscription-apple-pay .subscription-options .card .card-body {
@@ -20375,6 +20377,8 @@ select:-webkit-autofill:focus {
   gap: 16px;
   width: 100%;
   border-bottom: 1px solid #efeff0;
+  position: relative;
+  z-index: 2;
 }
 .comparing-carousel .carousel-inner {
   height: 100%;
@@ -20418,11 +20422,11 @@ select:-webkit-autofill:focus {
 .comparing-carousel .carousel-indicators [data-bs-target].active {
   background: #7e61ff;
 }
-.comparing-carousel .carousel-control-prev,
-.comparing-carousel .carousel-control-next {
+.comparing-carousel .carousel-control-prev:not(.carousel-control-bs),
+.comparing-carousel .carousel-control-next:not(.carousel-control-bs) {
   position: static;
 }
-.comparing-carousel .carousel-control-next {
+.comparing-carousel .carousel-control-next:not(.carousel-control-bs) {
   color: #fff;
   text-align: center;
   font-family: "Satoshi", sans-serif;
@@ -20450,10 +20454,10 @@ select:-webkit-autofill:focus {
   transition: all 0.3s ease;
   opacity: 1;
 }
-.comparing-carousel .carousel-control-next:hover, .comparing-carousel .carousel-control-next:active {
+.comparing-carousel .carousel-control-next:not(.carousel-control-bs):hover, .comparing-carousel .carousel-control-next:not(.carousel-control-bs):active {
   background-color: #5949e5;
 }
-.comparing-carousel .carousel-control-next:disabled {
+.comparing-carousel .carousel-control-next:not(.carousel-control-bs):disabled {
   background-color: #b1afc4;
 }
 .comparing-carousel .wrap-bottom-button {
@@ -20498,6 +20502,11 @@ select:-webkit-autofill:focus {
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+}
+.wrap-content-communication p,
+.wrap-content-communication ol,
+.wrap-content-communication ul {
+  margin-bottom: 20px;
 }
 
 .wrap-content-county {
@@ -20607,6 +20616,11 @@ select:-webkit-autofill:focus {
   flex-grow: 1;
   height: 100%;
 }
+.wrap-content-summary p,
+.wrap-content-summary ol,
+.wrap-content-summary ul {
+  margin-bottom: 20px;
+}
 .wrap-content-summary .wrap-text .title {
   font-family: "Neue-Regrade", sans-serif;
   font-size: 30px;
@@ -20686,6 +20700,19 @@ select:-webkit-autofill:focus {
 }
 .wrap-content-summary .wrap-button button:nth-child(2) {
   width: 120px;
+}
+
+.carousel-control-prev-custom,
+.carousel-control-next-custom {
+  width: 35px;
+}
+
+.carousel-control-prev-custom {
+  left: -18px;
+}
+
+.carousel-control-next-custom {
+  right: -18px;
 }
 
 .wrap-comparison-card {
@@ -23473,6 +23500,14 @@ footer .wrap-send-message {
   gap: 8px;
   align-self: stretch;
   flex-wrap: wrap;
+}
+
+.adminDashboard textarea.form-control {
+  height: auto;
+  min-height: 120px;
+}
+.adminDashboard .form-control:hover {
+  border-width: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */

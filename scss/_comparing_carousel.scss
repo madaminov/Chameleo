@@ -10,6 +10,8 @@
     gap: 16px;
     width: 100%;
     border-bottom: 1px solid $gray-3;
+    position: relative;
+    z-index: 2;
   }
   .carousel-inner {
     height: 100%;
@@ -53,11 +55,11 @@
       }
     }
   }
-  .carousel-control-prev,
-  .carousel-control-next {
+  .carousel-control-prev:not(.carousel-control-bs),
+  .carousel-control-next:not(.carousel-control-bs) {
     position: static;
   }
-  .carousel-control-next {
+  .carousel-control-next:not(.carousel-control-bs) {
     color: $white;
     text-align: center;
     font-family: $font-stack-satoshi;
@@ -127,6 +129,11 @@
       font-weight: 400;
       line-height: 22px;
     }
+  }
+  p,
+  ol,
+  ul {
+    margin-bottom: 20px;
   }
 }
 .wrap-content-county {
@@ -236,6 +243,11 @@
   padding: 34px 4px 0px 4px;
   flex-grow: 1;
   height: 100%;
+  p,
+  ol,
+  ul {
+    margin-bottom: 20px;
+  }
   .wrap-text {
     .title {
       font-family: $font-stack-neue-regrade;
@@ -318,4 +330,14 @@
       }
     }
   }
+}
+.carousel-control-prev-custom,
+.carousel-control-next-custom {
+  width: 35px;
+}
+.carousel-control-prev-custom {
+  left: -18px;
+}
+.carousel-control-next-custom {
+  right: -18px;
 }

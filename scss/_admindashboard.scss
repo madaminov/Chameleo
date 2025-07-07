@@ -1,0 +1,9 @@
+.adminDashboard {
+  textarea.form-control {
+    height: auto;
+    min-height: 120px;
+  }
+  .form-control:hover {
+    border-width: 1px;
+  }
+}
