@@ -20777,6 +20777,10 @@ select:-webkit-autofill:focus {
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.1px;
 }
+.comparison-card .scale-labels span {
+  background-color: rgba(29, 180, 214, 0.4);
+  box-shadow: 0px 0px 10px 5px rgba(29, 180, 214, 0.4);
+}
 .comparison-card .slider-wrap {
   display: flex;
   flex-direction: column;

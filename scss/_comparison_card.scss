@@ -57,6 +57,10 @@
     font-weight: 500;
     line-height: 20px; /* 142.857% */
     letter-spacing: 0.1px;
+    span {
+      background-color: rgb(29 180 214 / 40%);
+      box-shadow: 0px 0px 10px 5px rgb(29 180 214 / 40%);
+    }
   }
 
   .slider-wrap {
