@@ -19983,6 +19983,208 @@ select:-webkit-autofill:focus {
   flex-direction: column;
 }
 
+.rate-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 2;
+}
+.rate-wrapper .top-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.rate-wrapper .section-inner {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  align-self: stretch;
+}
+.rate-wrapper .wrap-header-benefits {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+.rate-wrapper .wrap-header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.rate-wrapper .wrap-header h1, .rate-wrapper .wrap-header .h1 {
+  color: #141414;
+  align-self: stretch;
+  font-family: "Neue-Regrade", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.rate-wrapper .wrap-header .text {
+  color: #454b60;
+  align-self: stretch;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.rate-wrapper .benefits-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.rate-wrapper .benefits-list .benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  color: #454b60;
+  text-overflow: ellipsis;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.rate-wrapper .rate-options {
+  width: 100%;
+}
+.rate-wrapper .rate-options .rate-options-row {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.rate-wrapper .rate-options .rate-options-row .col {
+  width: calc(25% - 8px);
+}
+.rate-wrapper .rate-options .title {
+  font-family: "Neue-Regrade", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #08add2;
+  margin-bottom: 12px;
+}
+.rate-wrapper .rate-options .text-info {
+  font-family: "Neue-Regrade", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #08add2 !important;
+  line-height: 14px;
+  position: relative;
+  width: 110%;
+  left: -5%;
+  margin-top: 5px;
+}
+.rate-wrapper .rate-options .rate-card {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+}
+.rate-wrapper .rate-options .rate-radio {
+  display: none;
+}
+.rate-wrapper .rate-options .card {
+  border-radius: 16px;
+  border: 1px solid #454b60;
+  transition: all 0.3s ease;
+  height: 50px;
+  background-color: transparent;
+}
+.rate-wrapper .rate-options .card .card-body {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.rate-wrapper .rate-options .card .card-body .plan-title {
+  color: #454b60;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  letter-spacing: -0.32px;
+  text-align: left;
+}
+.rate-wrapper .rate-options .card .card-body .plan-price {
+  color: #454b60;
+  font-family: "Satoshi", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 123.077% */
+  transition: all 0.3s ease;
+}
+.rate-wrapper .rate-options .card .card-body .plan-description {
+  margin-top: auto;
+  color: #454b60;
+  font-family: "Satoshi", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.rate-wrapper .rate-options input[type=radio]:checked + label .card {
+  border-color: #6f60f4;
+  background-color: #6f60f4;
+}
+.rate-wrapper .rate-options input[type=radio]:checked + label .card .card-body .plan-price {
+  color: #fff;
+}
+.rate-wrapper .rate-options .subscription-radio:checked + .card {
+  border-color: #08add2;
+}
+.rate-wrapper .rate-options .subscription-radio:checked + .card .plan-title,
+.rate-wrapper .rate-options .subscription-radio:checked + .card .plan-price,
+.rate-wrapper .rate-options .subscription-radio:checked + .card .plan-description {
+  color: #08add2;
+}
+.rate-wrapper .payment-buttons {
+  width: 100%;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.rate-wrapper .rate-box-text {
+  border: 1px solid #6f60f4;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.rate-wrapper .rate-box-text .head {
+  font-size: 14px;
+  padding: 5px;
+  text-align: center;
+  background-color: #6f60f4;
+}
+.rate-wrapper .rate-box-text .text {
+  padding: 5px;
+  color: #141414;
+  font-family: "Satoshi", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
 .geolocation {
   height: 100dvh;
   display: flex;

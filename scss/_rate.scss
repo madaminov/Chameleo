@@ -1,0 +1,206 @@
+.rate-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100dvh;
+  position: relative;
+  z-index: 2;
+  .top-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .section-inner {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    align-self: stretch;
+  }
+  .wrap-header-benefits {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .wrap-header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    h1 {
+      color: $black;
+      align-self: stretch;
+      font-family: $font-stack-neue-regrade;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+    .text {
+      color: $gray-6;
+      align-self: stretch;
+      font-family: $font-stack-satoshi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+  .benefits-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      overflow: hidden;
+      color: $gray-6;
+      text-overflow: ellipsis;
+      font-family: $font-stack-satoshi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+  .rate-options {
+    width: 100%;
+    .rate-options-row {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: stretch;
+      .col {
+        width: calc(25% - 8px);
+      }
+    }
+    .title {
+      font-family: $font-stack-neue-regrade;
+      font-size: 16px;
+      font-weight: 600;
+      color: $blue-4;
+      margin-bottom: 12px;
+    }
+    .text-info {
+      font-family: $font-stack-neue-regrade;
+      font-size: 12px;
+      font-weight: 400;
+      color: $blue-4 !important;
+      line-height: 14px;
+      position: relative;
+      width: 110%;
+      left: calc(-5%);
+      margin-top: 5px;
+    }
+    .rate-card {
+      display: block;
+      cursor: pointer;
+      width: 100%;
+      height: auto;
+    }
+    .rate-radio {
+      display: none;
+    }
+
+    .card {
+      border-radius: 16px;
+      border: 1px solid $gray-6;
+      transition: all 0.3s ease;
+      height: 50px;
+      background-color: transparent;
+      .card-body {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        .plan-title {
+          color: $gray-6;
+          font-family: $font-stack-satoshi;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 125% */
+          letter-spacing: -0.32px;
+          text-align: left;
+        }
+        .plan-price {
+          color: $gray-6;
+          font-family: $font-stack-satoshi;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 32px; /* 123.077% */
+          transition: all 0.3s ease;
+        }
+        .plan-description {
+          margin-top: auto;
+          color: $gray-6;
+          font-family: $font-stack-satoshi;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+        }
+      }
+    }
+    input[type='radio']:checked + label {
+      .card {
+        border-color: $blue-1;
+        background-color: $blue-1;
+        .card-body {
+          .plan-price {
+            color: $white;
+          }
+        }
+      }
+    }
+    .subscription-radio:checked + .card {
+      border-color: $blue-4;
+      .plan-title,
+      .plan-price,
+      .plan-description {
+        color: $blue-4;
+      }
+    }
+  }
+  .payment-buttons {
+    width: 100%;
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  .rate-box-text {
+    border: 1px solid $blue-1;
+    border-radius: 16px;
+    overflow: hidden;
+    .head {
+      font-size: 14px;
+      padding: 5px;
+      text-align: center;
+      background-color: $blue-1;
+    }
+    .text {
+      padding: 5px;
+      color: $black;
+      font-family: $font-stack-satoshi;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+}
