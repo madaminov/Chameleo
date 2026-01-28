@@ -20050,7 +20050,7 @@ select:-webkit-autofill:focus {
 }
 .rate-wrapper .benefits-list .benefit-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   overflow: hidden;
   color: #454b60;
@@ -20128,9 +20128,9 @@ select:-webkit-autofill:focus {
 .rate-wrapper .rate-options .card .card-body .plan-price {
   color: #454b60;
   font-family: "Satoshi", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 32px; /* 123.077% */
   transition: all 0.3s ease;
 }

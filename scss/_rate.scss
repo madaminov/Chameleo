@@ -63,7 +63,7 @@
     gap: 12px;
     .benefit-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 12px;
       overflow: hidden;
       color: $gray-6;
@@ -140,9 +140,9 @@
         .plan-price {
           color: $gray-6;
           font-family: $font-stack-satoshi;
-          font-size: 20px;
+          font-size: 18px;
           font-style: normal;
-          font-weight: 600;
+          font-weight: 500;
           line-height: 32px; /* 123.077% */
           transition: all 0.3s ease;
         }
