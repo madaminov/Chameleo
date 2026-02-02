@@ -17573,6 +17573,12 @@ select:-webkit-autofill:focus {
   opacity: 1;
 }
 
+button .spinner-border {
+  width: 14px;
+  height: 14px;
+  border-width: 1px;
+}
+
 .btn-skip {
   color: #141414;
   text-align: center;
